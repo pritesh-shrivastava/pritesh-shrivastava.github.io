@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Site lanched with Jekyll & Github Pages"
+title: "Site launched with Jekyll & Github Pages"
 date: 2020-08-30
 ---
 
