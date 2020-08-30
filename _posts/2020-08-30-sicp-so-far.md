@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Journey with SICP so far"
+date: 2020-08-30
+---
+
 ### The magic of SICP
 
 I was introduced to this book by a great article from Peter Norvig, [Teach Yourself Programming in 21 Days](http://norvig.com/21-days.html). This idea of programming being a skill to be honed continuously for an extended period of time really resonated with me, and Peter did write a great review for this book on [Amazon](https://www.amazon.com/review/R403HR4VL71K8/ref=cm_cr_rdp_perm) as well (Thanks to [Hacker News](https://news.ycombinator.com/item?id=1900937) for highlighting this).
