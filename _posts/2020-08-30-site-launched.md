@@ -5,5 +5,5 @@ date: 2020-08-30
 ---
 
 This is my noob attempt at creating a website & a blog for myself.
-It's powered by [Jekyll](http://jekyllrb.com), Github Pages and Markdown. 
+It's powered by [Jekyll](http://jekyllrb.com), Github Pages and Markdown, which were surprisingly pretty simple to use.
 If you're interested to know how, check out this great [guide](http://jmcglone.com/guides/github-pages/) !!
