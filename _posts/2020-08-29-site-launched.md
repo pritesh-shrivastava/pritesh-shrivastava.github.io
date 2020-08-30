@@ -2,6 +2,7 @@
 layout: post
 title: "Site launched with Jekyll & Github Pages"
 date: 2020-08-29
+comments: true
 ---
 
 ## Hello World!

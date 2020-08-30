@@ -2,6 +2,7 @@
 layout: post
 title: "My favourite Data Science learning resources"
 date: 2020-08-31
+comments: true
 ---
 
 ## Data Science Resources that I loved

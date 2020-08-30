@@ -2,6 +2,7 @@
 layout: post
 title: "Journey with SICP so far"
 date: 2020-08-30
+comments: true
 ---
 
 ## The magic of SICP
