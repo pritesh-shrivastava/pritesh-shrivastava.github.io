@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Journey with SICP so far"
+title: "My journey with SICP so far"
 date: 2020-08-30
 comments: true
 ---

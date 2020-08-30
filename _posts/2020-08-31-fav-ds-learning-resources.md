@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My favourite Data Science learning resources"
+title: "Favourite DS learning resources"
 date: 2020-08-31
 comments: true
 ---
