@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Favourite DS learning resources"
+title: "Favourite learning resources for ML"
 date: 2020-08-31
 comments: true
 ---
 
-## Data Science Learning Resources that I loved
+## ML Learning Resources that I loved
 
 There's no dearth of free (or cheap) online resources for learning data science these days. In fact, with all the hype around AI in the last few years ("sexiest job" ?!?), I feel the only industry that has seen an AI boom is the MOOC industry! My own experience of learning ML, and broadly DS related topics, online has been mostly positive so far, though there have been the odd half baked courses designed to purely make some quick bucks. Here, I'm just listing down my all time favourite MOOCs / books that I thoroughly enjoyed :
 
