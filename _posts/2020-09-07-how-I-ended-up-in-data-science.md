@@ -66,5 +66,9 @@ So should you really be working in this industry right now ? Regardless of an ec
 
 
 <!--
+<br>
+<br>
+<h7>
 <b id="f1">1</b> Turns out you don't need to be a genius to score well in board exam math, almost half the questions are repeated from either previous year exams or from the leading refresher books. So, it's more about practise than ability [↩](#a1)
+</h7>
 -->
