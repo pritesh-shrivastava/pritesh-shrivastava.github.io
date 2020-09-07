@@ -68,7 +68,8 @@ So should you really be working in this industry right now ? Regardless of an ec
 <!--
 <b id="f1">1</b> Turns out you don't need to be a genius to score well in board exam math, almost half the questions are repeated from either previous year exams or from the leading refresher books. So, it's more about practise than ability [↩](#a1)
 -->
-
+<br>
+<br>
 <h7>
-<b id="f1">1</b> The "data science" hype had not peaked back then & my role was officially called the Head of Efficacy, because my team's job was to measure our program efficacy. We soon realized that calling it data science would make it easier for others to understand what we were doing. [↩](#a2)
+<b id="f1">[1]</b> The "data science" hype had not peaked back then & my role was officially called the Head of Efficacy, because my team's job was to measure our program efficacy. We soon realized that calling it data science would make it easier for others to understand what we were doing. [↩](#a2)
 </h7>
