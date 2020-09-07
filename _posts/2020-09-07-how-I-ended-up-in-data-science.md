@@ -42,7 +42,7 @@ After consulting, I went to an edtech startup called [Avanti](https://avanti.in/
 
 #### Breaking into data science
 
-My foray into data science started while I was working on the [large scale](https://youtu.be/FjJ-ifyBlY8) school transformation project with the Haryana government at Avanti Fellows. We were working with a team from [J-PAL]() who were measuring the efficacy of Avanti's classroom pedagogy and seeing how they were measuring student learning purely using data got me really hooked into statistics. A big advantage of working at an early stage startup is that you have the freedom to create your own role, and Avanti's founding team supported me a lot to start the data science <sup id="a2">[1](#f1)</sup> practise in the company. 
+My foray into data science started while I was working on the [large scale](https://youtu.be/FjJ-ifyBlY8) school transformation project with the Haryana government at Avanti Fellows. We were working with a team from [J-PAL]() who were measuring the efficacy of Avanti's classroom pedagogy and seeing how they were measuring student learning purely using data got me really hooked into statistics. A big advantage of working at an early stage startup is that you have the freedom to create your own role, and Avanti's founding team supported me a lot to start the data science practise in the company. 
 
 #### Learning goes on
 
@@ -68,8 +68,3 @@ So should you really be working in this industry right now ? Regardless of an ec
 <!--
 <b id="f1">1</b> Turns out you don't need to be a genius to score well in board exam math, almost half the questions are repeated from either previous year exams or from the leading refresher books. So, it's more about practise than ability [↩](#a1)
 -->
-<br>
-<br>
-<h7>
-<b id="f1">[1]</b> The "data science" hype had not peaked back then & my role was officially called the Head of Efficacy, because my team's job was to measure our program efficacy. We soon realized that calling it data science would make it easier for others to understand what we were doing. [↩](#a2)
-</h7>
