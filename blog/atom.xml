@@ -1,0 +1,18 @@
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Pritesh Shrivastava's Blog</title>
+	<link href="http://pritesh-shrivastava.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://pritesh-shrivastava.github.io/blog"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://pritesh-shrivastava.github.io/blog</id>
+	<author>
+		<name>Pritesh Shrivastav</name>
+		<email>pritesh2312@gmail.com</email>
+	</author>
+
+	{% for post in site.posts %}
+		<entry>
