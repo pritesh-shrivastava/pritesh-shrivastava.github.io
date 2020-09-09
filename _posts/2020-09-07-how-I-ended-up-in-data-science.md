@@ -7,23 +7,6 @@ comments: true
 
 ## My topsy turvy ride to data science
 
-<!-- 
-
-WARNING : This post is going to be fairly self indulgent. Read ahead at your own risk !
-
-TL; DR : 
-
-#### Step I : Engineering
-
-Without being melodramatic, let me just say that growing up in a city like Bhopal in the 90s, you really only had 3 options to pick up a career after the Xth Board exams - engineering, medicine & commerce (& maybe law, depending on your social circle). Now, I was fairly good at both Maths & Biology at school, but A) because I scored 100% in my Maths Board <sup id="a1">[1](#f1)</sup> exams & B) because my parents studied a long time to become doctors, I ended taking the Maths & Science combination leading to engineering. Now I did attend a coaching class & studied hard for the JEE entrance exams, but right until I joined IIT Bombay, I had little to no idea what "engineering" really meant.
-
-
-#### Step II : Only 2 branches in engineering
-
-There is a popular but politically incorrect quote in engineering, but there really are only 2 fields in engineering - first is computer science, and the second is everything else. Now people may argue that there is cutting edge research happening in material sciences & nanotechnology, or in mechanical engineering with automotive cars, or in sustainabilty and energy tech, but when you boil down to it, the current progress in all these fields is driven by the advancements in computational science. There is an urgent need to fix the current higher education system & align the curriculum & the teaching capacity to what the modern engineering disciplines require. 
-
-But ofcourse, I didn't understand any of this when I was in college. 
--->
 
 #### Engineering
 

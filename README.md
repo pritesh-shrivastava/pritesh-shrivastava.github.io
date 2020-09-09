@@ -11,3 +11,4 @@ Personal website & blog hosted at [pritesh-shrivastava.github.io](https://prites
 - Prog Lang course
 - Haskell
 - HtDP ?
+- College / branch vs career
