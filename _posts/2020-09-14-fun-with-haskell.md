@@ -5,11 +5,10 @@ date: 2020-09-14
 comments: true
 ---
 
-## Fun(ctional) programming with Haskell
 
 My interest in Haskell arose while studying functional programming in [Lisp](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). While Lisp is not used as widely today, languages like Haskell, Scala & Clojure are fairly prominent. Haskell seemed to be the most unique & interesting to me as it is a pure & lazy FP language. I also really enjoyed some [quirky](https://youtu.be/SqWDAo1Jnyc) yet [intriguing](https://www.youtube.com/watch?v=re96UgMk6GQ) videos by Simon Peyton Jones on Haskell & its history. So I wanted to give it a try & started reading this funky book called "Learn You a Haskell" which is[freely available online](http://learnyouahaskell.com/). I'm roughly halfway into the book & wanted to talk about some cool Haskell features I've learned so far.
 
-#### Haskell reads like math
+### Haskell reads like math
 
 Haskell's list comprehensions tend to remind me a lot of my high school math books. For eg., to take a list of numbers from 1 to 10 & multiply them by 2, you simply write
 ```
@@ -27,7 +26,7 @@ length' xs = sum [1 | _ <- xs]
 ```
 The `_` symbol means we don't care about the value of the specific list element
 
-#### Haskell has type inference
+### Haskell has type inference
 
 While a function like `factorial n = product [1..n]` will work fine in Haskell, we can add typeclasses for its arguments which make the function more readable.
 ```
@@ -35,7 +34,7 @@ factorial :: Integer -> Integer
 factorial n = product [1..n] 
 ```
 
-#### Recursion feels so natural
+### Recursion feels so natural
 
 Haskell is built for recursion. Here's a simple function to reverse a list, using the `++` list append operator. `[]` refers to the empty list which is the base case when doing recursion on lists :
 ```
@@ -52,7 +51,7 @@ quicksort (x:xs) =
             biggerSorted = quicksort [a | a <- xs, a > x]  
 ``` 
 
-#### Pattern Matching rocks
+### Pattern Matching rocks
 
 We can rewrite the factorial function above in a recursive style as well, starting with the base case first, and then writing the inductive case :
 ```
@@ -68,7 +67,7 @@ length' (_:xs) = 1 + length' xs
 ``` 
 Here, `a`(pronounced as alpha) is a polymorphic data type, ie, it can have any type, but the function `length'` will always return a value of type `Int`. 
 
-#### Build using Higher order functions
+### Build using Higher order functions
 
 Haskell comes with built-in support for a lot of high level functions like map, filter, fold (foldl, foldr), zip, etc.
 

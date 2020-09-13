@@ -1,5 +1,11 @@
 Personal website & blog hosted at [pritesh-shrivastava.github.io](https://pritesh-shrivastava.github.io/)
 
+
+To test the site locally, run
+```
+bundle exec jekyll serve
+```
+
 ## Next steps
 
 - Add social media buttons for Twitter & LinkedIn at the bottom of Home / About pages
