@@ -39,13 +39,13 @@ factorial n = product [1..n]
 ## Recursion feels so natural
 
 Haskell is built for recursion. Here's a simple function to reverse a list, using the `++` list append operator. `[]` refers to the empty list which is the base case when doing recursion on lists :  
-```
+```haskell
 reverse [] = []  
 reverse (x:xs) = reverse' xs ++ [x]
 ```
 
 Let's take a loot at the popular quicksort algorithm to sort lists in Haskell :  
-```
+```hs
 quicksort [] = []  
 quicksort (x:xs) =   
     smallerSorted ++ [x] ++ biggerSorted
@@ -56,13 +56,13 @@ quicksort (x:xs) =
 ## Pattern Matching rocks
 
 We can rewrite the factorial function above in a recursive style as well, starting with the base case first, and then writing the inductive case :  
-```
+```hs
 factorial 0 = 1  
 factorial n = n * factorial (n - 1)
 ```
 
 This feels more natural, and more math-y! The `length` function from above can also be re-written like this :  
-```
+```hs
 length :: [a] -> Int
 length [] = 0  
 length (_:xs) = 1 + length' xs 
@@ -76,7 +76,7 @@ Haskell comes with built-in support for a lot of high level functions like map, 
 
 
 To find the largest number under 100,000 that's divisible by 3829, we can make use of Haskell's laziness as :  
-```
+```hs
 largestDivisible = head (filter p [100000,99999..])  
     where p x = x `mod` 3829 == 0
 ```

@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-	<html>
+	<html lang="{{ site.lang | default: "en-US" }}">
 		<head>
 			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
+			<meta charset='utf-8'>
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+			<!-- link to main stylesheet 
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			-->
 			{% include google_analytics.html %}
 		</head>
 		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        <!--	<li><a href="/cv">CV</a></li> -->
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
+			<header>
+				<div class="container">
+					<section id="downloads">
+						<a href="/">Home</a>
+						<a href="/about">About</a>
+						<!--<a href="/cv">CV</a></li> -->
+						<a href="/blog">Blog</a>
+						<a href="https://pritesh-shrivastava.github.io/blog/atom.xml">RSS</a>
+					</section>
+				</div>
+			</header>
 			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
+				<section id="main_content">
+				  {{ content }}
+				</section>
+			</div>
+			<!--
 			<footer>
-	    		<ul>
-	        		<li><a href="mailto:pritesh2312@gmail.com">email</a></li>
-					<li><a href="https://github.com/pritesh-shrivastava">github.com/pritesh-shrivastava</a></li>
-					<li><a href="https://pritesh-shrivastava.github.io/blog/atom.xml">RSS</a></li>
-				</ul>
+				<div class="container">
+					<section id="downloads">
+				    	<a href="mailto:pritesh2312@gmail.com">email</a>
+						<a href="https://github.com/pritesh-shrivastava">github.com/pritesh-shrivastava</a></li>
+					</section>
+				</div>
 			</footer>
+			-->
 		</body>
 	</html>
