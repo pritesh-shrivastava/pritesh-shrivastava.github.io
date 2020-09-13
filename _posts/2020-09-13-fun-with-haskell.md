@@ -83,7 +83,9 @@ largestDivisible = head (filter p [100000,99999..])
 Although we pass an infinite list, due to Haskell's laziness, evalutation will stop once we find the `head` ie first element of the list that satisfies the filter.
 
 Here's another example using map, to find the sum of all odd squares that are smaller than 10,000 :  
-`sumOddSq = sum (takeWhile (<10000) (map (^2) [1, 3..]) )`
+```
+sumOddSq = sum (takeWhile (<10000) (map (^2) [1, 3..]) )
+```
 
 
 This was a quick summary of some interesting programming ideas that I've seen in Haskell so far. Although I know I've barely scratched the surface here. I'm yet to study more advanced concepts like monads, typeclasses, monoids & dealing with laziness. I'll try & share my learnings of these topics as I go along. 
