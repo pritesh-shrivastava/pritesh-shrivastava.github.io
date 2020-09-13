@@ -88,6 +88,8 @@ sumOddSq = sum (takeWhile (<10000) (map (^2) [1, 3..]) )
 ```
 
 
-This was a quick summary of some interesting programming ideas that I've seen in Haskell so far. Although I know I've barely scratched the surface here. I'm yet to study more advanced concepts like monads, typeclasses, monoids & dealing with laziness. I'll try & share my learnings of these topics as I go along. 
+This was a quick summary of some interesting programming ideas that I've seen in Haskell so far. Although I know I've barely scratched the surface here, I'm yet to study more advanced concepts like monads, typeclasses, monoids & dealing with laziness. I'll try & share my learnings of these topics as I go along. 
 
-If you're interested in functional programming, I'll highly recommend the [Programming Languages](https://www.coursera.org/learn/programming-languages) MOOC by Prof Dan Grossman. While the course uses Standard ML to teach statically typed functional programming (Part A), most concepts were taught in such a generalized manner that I could easily apply them to Haskell as well !!
+***
+
+**PS** - If you're interested in functional programming, I'll highly recommend the [Programming Languages](https://www.coursera.org/learn/programming-languages) MOOC by Prof Dan Grossman. While the course uses Standard ML to teach statically typed functional programming (Part A), most concepts were taught in such a generalized manner that I could easily apply them to Haskell as well !!
