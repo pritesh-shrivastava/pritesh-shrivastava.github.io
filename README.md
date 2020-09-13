@@ -18,3 +18,4 @@ bundle exec jekyll serve
 - Haskell
 - HtDP ?
 - College / branch vs career
+- Add tags to each post, filter by tags or divide post links into sections on a page
