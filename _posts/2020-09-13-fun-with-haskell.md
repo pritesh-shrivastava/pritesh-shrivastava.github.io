@@ -11,13 +11,19 @@ My interest in Haskell arose while studying functional programming in [Lisp](htt
 ## Haskell reads like math
 
 Haskell's list comprehensions tend to remind me a lot of my high school math books. For eg., to take a list of numbers from 1 to 10 & multiply them by 2, you simply write :  
-    `[x*2 | x <- [1..10]]` 
+```haskell
+[x*2 | x <- [1..10]]
+``` 
 
 The ease with which you can express mathematical problems in Haskell so succintly just blows me away sometimes! Here's a one liner to find the no of right triangles where each side has an integer length less than or equal to 10 :  
-    `rightTriangles = [(a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10], a^2 + b^2 == c^2]`  
+```haskell
+rightTriangles = [(a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10], a^2 + b^2 == c^2]
+```
 
 Here's another one line function to calculate the length of a list :  
-    `length xs = sum [1 | _ <- xs]`
+```haskell
+length xs = sum [1 | _ <- xs]
+```
 
 The `_` symbol means we don't care about the value of the specific list element
 
