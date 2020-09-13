@@ -68,7 +68,7 @@ length [] = 0
 length (_:xs) = 1 + length' xs 
 ```
 
-Here, `a`(pronounced as alpha) is a polymorphic data type, ie, it can have any type, but the function `length'` will always return a value of type `Int`. 
+Here, `a` (pronounced as alpha) is a polymorphic data type, ie, it can have any type, but the function `length` will always return a value of type `Int`. 
 
 ## Build using Higher order functions
 
