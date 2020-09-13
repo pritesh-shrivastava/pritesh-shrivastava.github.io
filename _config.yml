@@ -2,6 +2,7 @@ name: Pritesh Shrivastava's blog
 url: http://pritesh-shrivastava.github.io
 permalink: /blog/:year/:month/:day/:title
 markdown: kramdown
+theme: jekyll-theme-hacker
 kramdown:
   input: GFM
   syntax_highlighter: rouge
