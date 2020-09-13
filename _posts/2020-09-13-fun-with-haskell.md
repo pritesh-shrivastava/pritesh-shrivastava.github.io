@@ -45,13 +45,13 @@ reverse (x:xs) = reverse' xs ++ [x]
 ```
 
 Let's take a loot at the popular quicksort algorithm to sort lists in Haskell :  
-```
+{% highlight ruby %}
 quicksort [] = []  
 quicksort (x:xs) =   
     smallerSorted ++ [x] ++ biggerSorted
     where   smallerSorted = quicksort [a | a <- xs, a <= x]  
             biggerSorted = quicksort [a | a <- xs, a > x]
-```
+{% endhighlight %}
 
 ## Pattern Matching rocks
 
