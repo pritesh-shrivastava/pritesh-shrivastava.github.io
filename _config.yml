@@ -1,4 +1,7 @@
 name: Pritesh Shrivastava's blog
 url: http://pritesh-shrivastava.github.io
-markdown: GFM
 permalink: /blog/:year/:month/:day/:title
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
