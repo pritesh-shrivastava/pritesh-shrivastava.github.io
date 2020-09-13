@@ -1,11 +1,11 @@
 name: Pritesh Shrivastava's blog
 url: http://pritesh-shrivastava.github.io
 permalink: /blog/:year/:month/:day/:title
-markdown: kramdown
 theme: jekyll-theme-hacker
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
+markdown: kramdown
+#kramdown:
+#  input: GFM
+#  syntax_highlighter: rouge
+#  syntax_highlighter_opts:
         # Use existing pygments syntax highlighting css
-        css_class: 'highlight'
+#        css_class: 'highlight'
