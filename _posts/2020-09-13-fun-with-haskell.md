@@ -6,7 +6,7 @@ comments: true
 ---
 
 
-My interest in Haskell arose while studying functional programming in [Lisp](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). While Lisp is not used as widely today, languages like Haskell, Scala & Clojure are fairly prominent. Haskell seemed to be the most unique & interesting to me as it is a pure & lazy FP language. I also really enjoyed some [quirky](https://youtu.be/SqWDAo1Jnyc) yet [intriguing](https://www.youtube.com/watch?v=re96UgMk6GQ) videos by Simon Peyton Jones on Haskell & its history. So I wanted to give it a try & started reading this funky book called "Learn You a Haskell" which is[freely available online](http://learnyouahaskell.com/). I'm roughly halfway into the book & wanted to talk about some cool Haskell features I've learned so far.
+My interest in Haskell arose while studying functional programming in [Lisp](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). While Lisp is not used as widely today, languages like Haskell, Scala & Clojure are fairly prominent. Haskell seemed to be the most unique & interesting to me as it is a pure & lazy FP language. I also really enjoyed some [quirky](https://youtu.be/SqWDAo1Jnyc) yet [intriguing](https://www.youtube.com/watch?v=re96UgMk6GQ) videos by Simon Peyton Jones on Haskell & its history. So I wanted to give it a try & started reading this funky book called "Learn You a Haskell" which is [freely available online](http://learnyouahaskell.com/). I'm roughly halfway into the book & wanted to talk about some cool Haskell features I've learned so far.
 
 ## Haskell reads like math
 
@@ -45,7 +45,7 @@ reverse (x:xs) = reverse' xs ++ [x]
 ```
 
 Let's take a loot at the popular quicksort algorithm to sort lists in Haskell :  
-{% highlight ruby %}
+{% highlight haskell %}
 quicksort [] = []  
 quicksort (x:xs) =   
     smallerSorted ++ [x] ++ biggerSorted
@@ -83,7 +83,7 @@ largestDivisible = head (filter p [100000,99999..])
 Although we pass an infinite list, due to Haskell's laziness, evalutation will stop once we find the `head` ie first element of the list that satisfies the filter.
 
 Here's another example using map, to find the sum of all odd squares that are smaller than 10,000 :  
-```
+```haskell
 sumOddSq = sum (takeWhile (<10000) (map (^2) [1, 3..]) )
 ```
 
