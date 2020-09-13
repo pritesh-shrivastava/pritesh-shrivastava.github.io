@@ -30,10 +30,10 @@ The `_` symbol means we don't care about the value of the specific list element
 ## Haskell has type inference
 
 While a function like `factorial n = product [1..n]` will work perfectly fine in Haskell, we can add typeclasses for its arguments which make the function more readable :  
-
-    factorial :: Integer -> Integer  
-    factorial n = product [1..n]
-
+```haskell
+factorial :: Integer -> Integer  
+factorial n = product [1..n]
+```
 
 
 ## Recursion feels so natural
