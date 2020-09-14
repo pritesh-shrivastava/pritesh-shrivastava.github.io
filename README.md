@@ -20,3 +20,4 @@ bundle exec jekyll serve
 - College / branch vs career
 - Add tags to each post, filter by tags or divide post links into sections on a page
 - Can try Primer theme from GH Pages as well ?
+- Check PageSpeed suggestions from Google Analytics if score < 90% for a page

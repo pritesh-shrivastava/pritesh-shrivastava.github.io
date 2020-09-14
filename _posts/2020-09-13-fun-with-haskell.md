@@ -65,7 +65,7 @@ This feels more natural, and more math-y! The `length` function from above can a
 ```hs
 length :: [a] -> Int
 length [] = 0  
-length (_:xs) = 1 + length' xs 
+length (_:xs) = 1 + length xs 
 ```
 
 Here, `a` (sometimes pronounced as alpha by ML hackers) is a type variable that can have any type. It makes the function `length` more powerful as it can take a list of any data type as input, but the function  will always return a value of type `Int`. 
