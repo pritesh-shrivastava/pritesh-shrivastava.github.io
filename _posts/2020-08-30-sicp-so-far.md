@@ -19,4 +19,4 @@ I always thought these CS concepts were too abstract for any real life use case,
 
 But enough about the exciting parts, when you get down to it, SICP is hard, really HARD !! [Codology.net](https://codology.net/post/introduction/) was one of the best resources I found online documenting each problem & solution of SICP meticulously, and even that site is incomplete. Fortunately though, there is a community contributed [Wiki](http://community.schemewiki.org/?sicp-solutions) for SICP problems that is almost complete and provides good resources to help you when you're stuck. The [Youtube lectures](https://www.youtube.com/playlist?list=PLE18841CABEA24090) from MIT by the authors of the book are also a great learning resource. I love the puzzled and bewildered reactions of the students in these videos btw :D 
 
-So anyway, I will continue to work through the rest exercises of this book and share my learnings (enlightenment ?!) along the way.
+So anyway, I will continue to work through the rest of the exercises of this book and share my learnings (enlightenment ?!) along the way.
