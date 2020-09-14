@@ -29,7 +29,7 @@ The `_` symbol means we don't care about the value of the specific list element
 
 ## Haskell has type inference
 
-While a function like `factorial n = product [1..n]` will work perfectly fine in Haskell, we can add typeclasses for its arguments which make the function more readable :  
+While a function like `factorial n = product [1..n]` will work perfectly fine in Haskell, we can add a type signature to our function definition as well which makes the function more readable :  
 ```haskell
 factorial :: Integer -> Integer  
 factorial n = product [1..n]
@@ -68,7 +68,7 @@ length [] = 0
 length (_:xs) = 1 + length' xs 
 ```
 
-Here, `a` (pronounced as alpha) is a polymorphic data type, ie, it can have any type, but the function `length` will always return a value of type `Int`. 
+Here, `a` (sometimes pronounced as alpha by ML hackers) is a type variable that can have any type. It makes the function `length` more powerful as it can take a list of any data type as input, but the function  will always return a value of type `Int`. 
 
 ## Build using Higher order functions
 
@@ -93,3 +93,5 @@ This was a quick summary of some interesting programming ideas that I've seen in
 ***
 
 **PS** - If you're interested in functional programming, I'll highly recommend the [Programming Languages](https://www.coursera.org/learn/programming-languages) MOOC by Prof Dan Grossman. While the course uses Standard ML to teach statically typed functional programming (Part A), most concepts were taught in such a generalized manner that I could easily apply them to Haskell as well !!
+
+**PPS** - Special thanks to the Reddit User [u/Noughmare](https://www.reddit.com/user/Noughtmare/) for helping me fix bigs in this article!
