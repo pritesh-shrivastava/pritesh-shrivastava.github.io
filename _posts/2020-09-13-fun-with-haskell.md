@@ -6,7 +6,13 @@ comments: true
 ---
 
 
-My interest in Haskell arose while studying functional programming in [Lisp](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). While Lisp is not used as widely today, languages like Haskell, Scala & Clojure are fairly prominent. Haskell seemed to be the most unique & interesting to me as it is a pure & lazy FP language. I also really enjoyed some [quirky](https://youtu.be/SqWDAo1Jnyc) yet [intriguing](https://www.youtube.com/watch?v=re96UgMk6GQ) videos by Simon Peyton Jones on Haskell & its history. So I wanted to give it a try & started reading this funky book called "Learn You a Haskell" which is [freely available online](http://learnyouahaskell.com/). I'm roughly halfway into the book & wanted to talk about some cool Haskell features I've learned so far.
+My interest in Haskell arose while studying functional programming in [Lisp](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). While Lisp is not used as widely today, languages like Haskell, Scala & Clojure are fairly prominent. Haskell seemed to be the most unique & interesting to me as it is a pure & lazy FP language. I also really enjoyed some [quirky](https://youtu.be/SqWDAo1Jnyc) yet [intriguing](https://www.youtube.com/watch?v=re96UgMk6GQ) videos by Simon Peyton Jones on Haskell & its history. He often talks about 3 of his mottos that he developed while working on Haskell:
+    - Purity is embarassing
+    - Laziness is cool
+    - Success should be avoided at all costs
+
+
+So I wanted to give Haskell a try & started reading this funky book called "Learn You a Haskell" which is [freely available online](http://learnyouahaskell.com/). I'm roughly halfway into the book & wanted to talk about some cool Haskell features I've learned so far.
 
 ## Haskell reads like math
 

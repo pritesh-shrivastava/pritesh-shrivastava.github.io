@@ -25,30 +25,30 @@ After consulting, I went to an edtech startup called [Avanti](https://avanti.in/
 
 #### Breaking into data science
 
-My foray into data science started while I was working on the [large scale](https://youtu.be/FjJ-ifyBlY8) school transformation project with the Haryana government at Avanti Fellows. We were working with a team from [J-PAL]() who were measuring the efficacy of Avanti's classroom pedagogy and seeing how they were measuring student learning purely using data got me really hooked into statistics. A big advantage of working at an early stage startup is that you have the freedom to create your own role, and Avanti's founding team supported me a lot to start the data science practise in the company. 
+My foray into data science started while I was working on the [large scale](https://youtu.be/FjJ-ifyBlY8) school transformation project with the Haryana government at Avanti. We were working with a team from [J-PAL]() who were measuring the efficacy of Avanti's classroom pedagogy and seeing how they were measuring student learning purely using data got me really hooked into statistics. A big advantage of working at an early stage startup is that you have the freedom to create your own role, and Avanti's founding team supported me a lot to start the data science practise in the company. 
 
 #### Learning goes on
 
 I had strong Excel skills & a brief coding experience when I started but I had to mainly rely on self learning to pick up the data wrangling, visualization & modeling skills across tools like R, Python & Tableau. I was fortunate that Avanti had a small but very strong team of developers that helped me pick up a lot of the best practises in tech along the way. Most of my projects back then revolved around creating web apps / dashboards to A) help students track their learning and fix their gaps and B) help teachers run classrooms more smoothly. These reporting tools laid the foundation for a lot of ML applications, and so, I always had something interesting to look forward to for learning. 
 
-I switched from Avanti after 4 years to head the data science team at Transunion, a major credit bureau. Compared to a startup, things move slowly in a big MNC, but then, you get more perks, and need to tackle fairly different problems related to scale, security and reliability. Regardless of the projects I work on, learning has now became a permanent part of my lifestyle, and if not for anything else, it's this aspect of my job that I feel the most excited about. 
+I switched from Avanti after 4 years to head the data science team at Transunion, a major credit bureau. Compared to a startup, things move slowly in a big MNC, but then, you get more perks, and need to tackle fairly different set of problems such as scale, security and reliability. Regardless of the projects I work on, learning has now became a permanent part of my lifestyle, and if not for anything else, it's this aspect of my job that I feel the most excited about. 
 
 
 #### The uncertain road ahead
 
-The field of ML is changing at an amazing speed. To give you a rough idea, it was just 6 years ago that a winning solution to a competition on Kaggle was an XGBoost model written in a forgotten language like Common Lisp. Lisp, of all languages!! Today, you have tools like Tensorflow & PyTorch to train giant networks on GPUs & TPUs on the cloud. And then, everyday, you keep hearing about some so many advancements in deep learning such as the new GPT-3 model being able to write student's college application essays & viral posts on Hacker News.
+The field of ML is changing at an amazing speed. To give you a rough idea, it was just 6 years ago that a winning solution to a competition on Kaggle was an XGBoost model written in a forgotten language like Common Lisp. Lisp, of all languages!! Today, you have tools like Tensorflow & PyTorch to train giant networks on GPUs & TPUs on the cloud. And then, everyday, you keep hearing about so many advancements in deep learning such as the new GPT-3 model being able to write student's college application essays & viral posts on Hacker News.
 
 Will this hype in ML or data science last ? Surely NOT !! We might even see an AI winter if the current research is not able to meet the oh-so-high expectations of investors and companies all around the world.
 I'm pretty sure the role of the unicorn "data scientist" will also go away soon. ML might just get integrated into software engineering creating a new role alongside front-end & back-end development, while Business Intelligence & Data Analyst roles might see more requirements added into their job descriptions. 
 
 The hype has really helped the L&D functions of the HR departments around the world though. Without much investment from thier side, their IT workforce has almost been  forced to learn & adapt to this new technology due to excessive competition in the job market. For someone just entering the field, I must admit the road is much more tougher. The job market is highly saturated with thousands of entry level candidaites hoping to break into ML or AI, and the situation has gotten worse with COVID-19 (You can say the same thing about entry level CS jobs as well).
 
-So should you really be working in this industry right now ? Regardless of an economic boom or bust, companies will always be on the lookout for good problem solvers who can quickly learn and adapt. You need to commit to the learning lifestyle though. For me, personally, I realized I needed to fill a lot of gaps in my theoritical CS knowledge and that is something I'm enjoying learning these days. [Jim Keller](https://www.youtube.com/watch?v=Nb2tebYAaOA) talks about reinveting yourself every 5 years. Maybe that sounds too extreme, but I've realized that as long as you're moving, it's not that difficult to change your trajectory.
+So should you really be working in this industry right now ? Regardless of an economic boom or bust, companies will always be on the lookout for good problem solvers who can quickly learn and adapt. You need to commit to the learning lifestyle though. For me, personally, I realized I needed to fill a lot of gaps in my theoritical CS knowledge and that is something I'm enjoying learning these days. A ([wise man](https://www.youtube.com/watch?v=Nb2tebYAaOA)) once said you should start from scratch every 5 years. Maybe that sounds too extreme, but I've realized that as long as you're moving, it's not that difficult to change your trajectory.
 
 
 
 
-<!--
+<!-- footer notes
 <br>
 <br>
 <h7>
