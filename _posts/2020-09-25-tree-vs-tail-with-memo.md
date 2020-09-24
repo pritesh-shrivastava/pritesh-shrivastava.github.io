@@ -8,7 +8,7 @@ comments: true
 
 In this post, I want to talk about 2 very interesting concepts of tree recursion & memoization, which I've been exploring in the wonderful book, [SICP](https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents) ([here's why](https://gist.github.com/jrajav/4076068)). I've also tried to re-implement these concepts from the language Scheme, used in SICP, to Python, to reinforce my understanding of these concepts & also to explore functional programming paradigm in Python.
 
-Before we dive in, here's a very short primer on one of my favorite concepts in programming, [recursion](https://www.google.com/search?q=recursion),
+Before we dive in, here's a very short primer on one of my favorite concepts in programming, [recursion](https://www.google.com/search?q=recursion) with Scheme.
 
 ### Recursion
 
