@@ -6,6 +6,11 @@ To test the site locally, run
 bundle exec jekyll serve
 ```
 
+To preview future dated posts, use
+```
+bundle exec jekyll serve --future
+```
+
 ## Next steps
 
 #### Site improvements
@@ -28,6 +33,7 @@ bundle exec jekyll serve
 - More Haskell - Monoid, purity
 - HtDP ?
 - College / branch vs career
+- Tree recursion vs Tail recursion + Cache for Fibonacci nos + Streams - https://www.lvguowei.me/post/sicp-goodness-fib/ - Translate in Python ?
 
 #### Promotion
 - Cross publish articles to Medium / HN
