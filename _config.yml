@@ -3,7 +3,7 @@ url: http://pritesh-shrivastava.github.io
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-hacker
 markdown: kramdown
-future: false
+#future: false
 #kramdown:
 #  input: GFM
 #  syntax_highlighter: rouge
