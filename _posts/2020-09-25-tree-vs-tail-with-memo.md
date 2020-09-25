@@ -130,7 +130,7 @@ fib_iter(40)
 
 
 26 x 10<sup>-6</sup>s vs 36.8 s!
-This is faster than the tree recursive procedure by 10<sup>6</sup> orders of magnitude !! But we can see that designing a tail recursive procedure is not always the most [intuitive solution](https://www.explainxkcd.com/wiki/index.php/1270:_Functional). So, let's look at another trade-off instead.
+This is faster than the tree recursive procedure by **6** orders of magnitude !! But we can see that designing a tail recursive procedure is not always the most [intuitive solution](https://www.explainxkcd.com/wiki/index.php/1270:_Functional). So, let's look at another trade-off instead.
 
 ### Memoization
 
