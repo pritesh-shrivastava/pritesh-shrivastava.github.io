@@ -141,16 +141,16 @@ Writing memoization in a functional language like Scheme though looks awkward, a
 ```scheme
 (define fib_memo
     (letrec
-            ( (memo null)
-              (f (lambda (x)
-                  (let ((ans (assoc x memo)))
-                       (if ans (cdr ans)
-                               (let ((new-ans (if (or (= x 1) (= x 2))
-                                                  1
-                                                  (+ (f (- x 1))(f (- x 2))))))
-                                                  (begin (set! memo (cons (cons x new-ans) memo))
-                                                         new-ans)))))])
-            f))
+            ((memo null)
+             (f (lambda (x)
+                (let ((ans (assoc x memo)))
+                    (if ans (cdr ans)
+                            (let    ((new-ans (if (or (= x 1) (= x 2))
+                                                1
+                                                (+ (f (- x 1))(f (- x 2))))))
+                                    (begin (set! memo (cons (cons x new-ans) memo))
+                                            new-ans)))))])
+    f))
 ```
 
 I've added the Python implementation below which admittedly looks much easier to read. I've made 1 important change though. Instead of the list data structure, I'm using the Python dictionary, an abstract data type that's implemented as a hash table, and so should add some performance benefit in lookup. I've also initialized the dictionary (memo) for the nos 0 & 1, ie, the base cases.
