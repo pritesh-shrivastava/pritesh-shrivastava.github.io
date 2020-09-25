@@ -31,6 +31,8 @@ Recursive procedures for functions like factorial are often intuitive to write d
                      max-count)))
     (helper 1 1 n))
 ```
+Compared to previous function definition of factorial, notice that in a tail recursive function, there are no pending multiplications like we saw earlier. One function call ends and the other one begins cleanly. There is no memory overhead for keeping track of multiple stacks of previous function calls. Tail recursion uses constant memory space compared to the growing (initially) & shrinking (later) memory space consumed by the original recursive procedure. This leads to better performance for tail recursive functions.
+
 
 ### Tree Recursion
 Alright, so now let's focus on a special kind of recursive procedure, tree recursion, where each function call can spawn mutliple recursive function calls. The most classic example for this is the function to compute Fibanacci numbers. [Here's](https://sarabander.github.io/sicp/html/1_002e2.xhtml#g_t1_002e2_002e2) the Scheme code from SICP:
@@ -84,7 +86,7 @@ fib_tree(40)
 
 
 
-*37 s!* That's clearly a terrible way to compute Fibonacci nos. We can improve the time complexity of this process if we use tail recursion instead.
+*36 s!* That's clearly a terrible way to compute Fibonacci nos. We can improve the time complexity of this process if we use tail recursion instead.
 
     
 
@@ -129,8 +131,10 @@ fib_iter(40)
 
 
 
-26 x 10<sup>-6</sup>s vs 36.8 s!
-This is faster than the tree recursive procedure by **6** orders of magnitude !! But we can see that designing a tail recursive procedure is not always the most [intuitive solution](https://www.explainxkcd.com/wiki/index.php/1270:_Functional). So, let's look at another trade-off instead.
+78 x 10<sup>-6</sup>s vs 36 s!
+This is faster than the tree recursive procedure by **6** orders of magnitude !! 
+
+But we can see that designing a tail recursive procedure is not always the most [intuitive solution](https://www.explainxkcd.com/wiki/index.php/1270:_Functional). So, let's look at another trade-off instead.
 
 ### Memoization
 
@@ -187,7 +191,7 @@ fib_memo(40)
 
 
 
-61 $\mu$s is slightly more than the 26.7 $\mu$s taken by the tail recurisve procedure but still **6** orders of magnitude faster than the tree recursive procedure !! That's because once we compute Fibonacci(5) say and store it to our cache, the subsequent calls will access it's value in near constant time from the Python dictionary.
+This is comparable to the tail recurisve procedure, slightly faster, but still **6** orders of magnitude faster than the tree recursive procedure !! That's because once we compute Fibonacci(5) say and store it to our cache, the subsequent calls will access it's value in near constant time from the Python dictionary.
 
 
 Alright then, if you are one of those people that get excited about concepts like recursion, and want to explore functional programming more, I'd highly encourage you to read SICP. I've written another blog post on my experience with studying SICP [here](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). If you're more of a MOOC person, the [Programming Languages](https://www.coursera.org/learn/programming-languages) course by Prof Dan Grossman on Coursera is really amazing, do check it out!
