@@ -187,7 +187,7 @@ fib_memo(40)
 
 
 
-61 $\mu$s is slightly more than the 26.7 $\mu$s taken by the tail recurisve procedure but still 10<sup>6</sup> orders of magnitude faster than the tree recursive procedure !! That's because once we compute Fibonacci(5) say and store it to our cache, the subsequent calls will access it's value in near constant time from the Python dictionary.
+61 $\mu$s is slightly more than the 26.7 $\mu$s taken by the tail recurisve procedure but still **6** orders of magnitude faster than the tree recursive procedure !! That's because once we compute Fibonacci(5) say and store it to our cache, the subsequent calls will access it's value in near constant time from the Python dictionary.
 
 
 Alright then, if you are one of those people that get excited about concepts like recursion, and want to explore functional programming more, I'd highly encourage you to read SICP. I've written another blog post on my experience with studying SICP [here](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). If you're more of a MOOC person, the [Programming Languages](https://www.coursera.org/learn/programming-languages) course by Prof Dan Grossman on Coursera is really amazing, do check it out!
