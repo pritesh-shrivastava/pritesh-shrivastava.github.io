@@ -18,10 +18,11 @@ bundle exec jekyll serve --future
 - Add Resume & other Project details / Git repos
 - Import stats from Goodreads profile
 - Add tags to each post, filter by tags or divide post links into sections on a page
-- Alternate themes - Code output doesn't look good in any GH Pages themesa apart from Hacker. Need navigation panel as well
+- Alternate themes - Code output doesn't look good in any GH Pages themesa apart from Hacker
+- Need navigation panel for monhtly archives
 - Check PageSpeed suggestions from Google Analytics if score < 90% for a page
 - Add Copywrite & licensing terms in About section like this - https://mdneuzerling.com/about/
-- Add Disqus activity to Google Analytics - responses & comments
+- Add Disqus activity to Google Analytics as goals or events - responses & comments
 
 
 #### Blog post ideas
@@ -33,8 +34,9 @@ bundle exec jekyll serve --future
 - More Haskell - Monoid, purity
 - HtDP ?
 - College / branch vs career
-- Tree recursion vs Tail recursion + Cache for Fibonacci nos + Streams - https://www.lvguowei.me/post/sicp-goodness-fib/ - Translate in Python ?
+- Insertion sort from Racket code in HtDP - helper functions that recur
 
 #### Promotion
 - Cross publish articles to Medium / HN
+- Reddit / Slack / Twitter / LinkedIn
 
