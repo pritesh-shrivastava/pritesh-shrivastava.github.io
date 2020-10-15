@@ -14,15 +14,14 @@ bundle exec jekyll serve --future
 ## Next steps
 
 #### Site improvements
-- Add social media buttons for Twitter & LinkedIn at the bottom of Home / About pages
-- Add Resume & other Project details / Git repos
+- Add social media icons with profile links for Facebook & LinkedIn in sidebar
+- Add Resume & other Project details with Git repos
 - Import stats from Goodreads profile
-- Add tags to each post, filter by tags or divide post links into sections on a page
-- Alternate themes - Code output doesn't look good in any GH Pages themesa apart from Hacker
-- Need navigation panel for monhtly archives
+- Add categories / collections for post links from mm ?
+- Year to year-month archives ?
 - Check PageSpeed suggestions from Google Analytics if score < 90% for a page
-- Add Copywrite & licensing terms in About section like this - https://mdneuzerling.com/about/
 - Add Disqus activity to Google Analytics as goals or events - responses & comments
+- Wanna clean GA / comments according to MM ? They are both working currently. Changing it might lead to loss of old comments / responses or page views!
 
 
 #### Blog post ideas

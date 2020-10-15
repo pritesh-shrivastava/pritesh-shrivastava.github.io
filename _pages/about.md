@@ -22,8 +22,7 @@ then it's a win-win !!
 
 This website is powered by <a href="http://jekyllrb.com">Jekyll</a> & Github Pages, 
 which were surprisingly pretty simple to use. The theme is  
-<a href="https://github.com/pages-themes/hacker">Hacker</a> which is provided by Jekyll. 
-To know more about these tools, check out this great 
+<a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a> which is free and compatible with Github Pages as a remote theme. To know more about these tools, check out this great 
 <a href="http://jmcglone.com/guides/github-pages/">guide</a>.
 
 
