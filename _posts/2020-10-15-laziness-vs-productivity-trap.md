@@ -2,6 +2,8 @@
 layout: post
 title: "Laziness vs The Trap of Productivity & Ambition"
 date: 2020-10-15
+tags:
+  - productivity
 comments: true
 ---
 

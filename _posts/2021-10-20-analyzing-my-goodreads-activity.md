@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "Laziness vs Hackish Productivity"
-date: 2020-10-20
+title: "Analyzing my Goodreads Data"
+date: 2021-10-20
+tags:
+    - productivity
 comments: true
 ---
 
 
 
-Read titles json
+Read titles json - No such thing !!
 
 
 My Reading Challenges on Goodreads

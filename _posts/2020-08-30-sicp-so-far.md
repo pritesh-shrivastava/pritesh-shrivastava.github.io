@@ -2,6 +2,10 @@
 layout: post
 title: "My journey with SICP so far"
 date: 2020-08-30
+tags:
+  - sicp
+  - functional programming
+  - lisp
 comments: true
 ---
 

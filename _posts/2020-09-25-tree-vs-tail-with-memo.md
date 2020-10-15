@@ -2,6 +2,11 @@
 layout: post
 title: "Tree vs Tail Recursion & Memoization"
 date: 2020-09-25
+tags:
+    - lisp
+    - functional programming
+    - python
+    - scheme
 comments: true
 ---
 
