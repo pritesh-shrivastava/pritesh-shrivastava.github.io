@@ -52,12 +52,12 @@ Firstly, these hacks and tools can increase your **anxiety** levels, with all th
 
 <img src="https://img.devrant.com/devrant/rant/r_957017_r4A2p.jpg" alt="Github Contribution Heatmap" width="400"/>
 
-I'd been feeling some burnout lately as all my professional and personal work happens in front of a screen sitting on the same desk at home. But even taking some time away to refresh can make you feel guilty when you are tracking your progress on tools like Trello or the Github Contribution charts like above!
+I'd been feeling some burnout lately as all of my professional and personal work happens in front of a screen sitting on the same desk at home. But even taking some time away to refresh can make you feel guilty when you are tracking your progress on tools like Trello or the Github Contribution charts like above!
 
 
 Secondly, and perhaps more importantly, it increases your **ego**. This whole act of focusing on your short term or long term goals, and updating them everyday is inherently quite self indulgent. You can end up focusing on yourself so much that others' needs might seem trivial in comparison & it sort of alienates you from your responsibilities towards others. What you've also done is created an image of yourself in your mind from which it can be very difficult to break apart. This is a very difficult problem to handle & I don't think I have a solution to this problem right now. 
 
-A small step that I'm taking right now is to delete all my old Trello lists & past goals. I never deleted them in the past because I would cherish them all as accomplishments. So just tossing them away might help shed of that baggage. Something else that I'm trying to do now is to include others in my "selfish" list of goals. Sharing my learnings on this blog with others can be one way of doing just that.
+A small step that I'm taking right now is to delete all my old Trello lists & past goals. I never deleted them in the past because I would cherish them all as accomplishments. So just tossing them away might help shed some of that baggage. Something else that I'm trying to do now is to include others in my "selfish" list of goals. Sharing my learnings on this blog with others can be one way of doing just that.
 
 
 So these are some of my (half-baked) thoughts around using productivity hacks and tools in your personal life. You can use these tools to hack / fool your mind into the trap of productivity and ambition. This trap is mostly beneficial to you but it can end up creating new problems as well. If you agree or disagree with any of these opinions, let me know in the comments section below!
