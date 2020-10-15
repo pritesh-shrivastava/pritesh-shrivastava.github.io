@@ -48,8 +48,8 @@ I completed 10 more learning goals in 2018, and another 22 in 2019. This year, I
 
 So far so good, right? But that's not the entire story. It's clear that productivity tools like Trello motivate you to do more and be more ambitious. I've definitely been able to overcome the problems of procrastination and overthinking by this approach. But I feel like they introduce some new problems into your life as well.
 
-Firstly, these hacks and tools can increase your **anxiety** levels, with all the pending lists of to-dos and looming deadlines. Now, some amout of anxiety is good as it pushes you to get up and do something. But it can also make you feel guilty if you're not "productive enough". I think the below meme perfectly captures this feeling of guilt and anxiety:
-<img src="https://i.redd.it/8lmadge8r0ky.jpg" alt="Github Contribution Heatmap" width="200"/>
+Firstly, these hacks and tools can increase your **anxiety** levels, with all the pending lists of to-dos and looming deadlines. Now, some amout of anxiety is good as it pushes you to get up and do something. But it can also make you feel guilty if you're not "productive enough". I think the below meme captures this feeling of guilt and anxiety really well:
+<img src="https://img.devrant.com/devrant/rant/r_957017_r4A2p.jpg" alt="Github Contribution Heatmap" width="400"/>
 
 I'd been feeling some burnout lately as all my professional and personal work happens in front of a screen sitting on the same desk at home. But even taking some time away to refresh can make you feel guilty when you are tracking your progress on tools like Trello or the Github Contribution charts like above!
 
