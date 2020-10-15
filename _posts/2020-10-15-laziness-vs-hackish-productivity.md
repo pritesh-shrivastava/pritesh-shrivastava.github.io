@@ -6,10 +6,9 @@ comments: true
 ---
 
 
-This post deviates away from the general theme of programming / data science & more focused on productivity. I think it's a very relevant topic in this time of COVID when everyone is feeling burned out working from home.
-This topic has always interested me because I'm generally a very lazy person in personal life. Professionally, most of us follow some project management tool or methodology at our workplaces like Agile, but what about out personal lives? How should we track our learning goals and side projects?
+This post deviates away from the general theme of programming / data science & it's more focused on productivity. I think it's a very relevant topic in this time of COVID when everyone is feeling burnt out while working from home. It has also been an interesting topic for me because I'm generally a very lazy person in personal life. Professionally, most of us follow some project management tool or methodology at our workplaces like Agile, but what about out personal lives? How do we (/should we) track our learning goals and side projects?
 
-I'm one of those people who are prone to overthinking. Taking a Physics analogy, getting started or overcoming static friction is the hardest part for me. Once I get a few early wins in a project, it gets much more easier, similar to "kinetic" friction". And as you get good in solving problems and get more experience, you tend to enjoy that process even more & start feeling "passionate" about it. That's when "rolling friction" kicks in.
+I'm one of those people who is prone to overthinking. Taking a Physics analogy, getting started or overcoming static friction is the hardest part for me. Once I get a few early wins in a project, it gets much more easier, similar to "kinetic" friction". And as you get good in solving problems and get more experience, you tend to enjoy that process even more & start feeling "passionate" about it. That's when "rolling friction" kicks in.
 
 The [Cult of the Done Manifesto](https://www.fastcompany.com/1665527/infographic-of-the-day-13-rules-for-realizing-your-creative-vision), released in 2009 by Bre Pettis & Kio Stark, is one of the most influential written articles that I keep coming back to, time and again. And it aims to solve this exact problem of overthinking and procrastination. Here are the 13 maxims of the Done Manifesto:
 
@@ -27,30 +26,30 @@ The [Cult of the Done Manifesto](https://www.fastcompany.com/1665527/infographic
     10.Failure counts as done. So do mistakes.
     11. Destruction is a variant of done.
     12. If you have an idea and publish it on the internet, that counts as a ghost of done.
-    Done is the engine of more.
+    13. Done is the engine of more.
 
 
 I also really like the idea of incremental and iterative "sprints" in the Scrum framework. There is something fun and addictive about marking a task as done or moving a card from 1 pane to another on a scrum board every day. In a hope to get similar motivation for my personal goals related to learning or side projects, I began tracking down my yearly goals on my own personal [Trello](https://trello.com/) board, which I've been maintaining for roughly 4 years now :
 
 It started with 3 goals in 2017, all of them being MOOCs - 
-- Tableau specialization (Coursera)
-- Python for Data Science by Microsoft (EdX)
-- Data Analysis by DUT - Visualization and Dashboard Design (Audit)
+1. Tableau specialization (Coursera)
+2. Python for Data Science by Microsoft (EdX)
+3. Data Analysis by DUT - Visualization and Dashboard Design (Audit)
 
 I completed 10 more learning goals in 2018, and another 22 in 2019. This year, I broke down the goals by quarter. In the last quarter (Jul-Sep), I was able to complete the following 8 personal projects - 
-- Launch self hosted blog on Github (atleast 3 articles)
-- Guide to Numpy book by Travis Oliphant
-- SIIM-ISIC Melanoma Classification on Kaggle
-- Bayesian Methods for Hackers : Probabilistic Programming & Bayesian Inference (e-book)
-- Programming Languages Course - Part A by University of Washington (Coursera)
-- Grokking Algorithms (e-book)
-- ML Engineer Nanodegree (Udacity) 
+1. Launch self hosted blog on Github (atleast 3 articles)
+2. Guide to Numpy book by Travis Oliphant
+3. SIIM-ISIC Melanoma Classification on Kaggle
+4. Bayesian Methods for Hackers : Probabilistic Programming & Bayesian Inference (e-book)
+5. Programming Languages Course - Part A by University of Washington (Coursera)
+6. Grokking Algorithms (e-book)
+7. ML Engineer Nanodegree (Udacity) 
 
 
-So far so good, right? But that's not the entire story. It's clear that productivity tools like Trello motivate you to do more and be more ambitious. I've definitely been able to overcome the problems of procrastination and overthinking by this approach. But I feel like they introduce some new problems into your life.
+So far so good, right? But that's not the entire story. It's clear that productivity tools like Trello motivate you to do more and be more ambitious. I've definitely been able to overcome the problems of procrastination and overthinking by this approach. But I feel like they introduce some new problems into your life as well.
 
 Firstly, these hacks and tools can increase your **anxiety** levels, with all the pending lists of to-dos and looming deadlines. Now, some amout of anxiety is good as it pushes you to get up and do something. But it can also make you feel guilty if you're not "productive enough". I think the below meme perfectly captures this feeling of guilt and anxeity:
-[Github Contribution Heatmap](https://preview.redd.it/8lmadge8r0ky.jpg?width=960&crop=smart&auto=webp&s=448f79239ec09d2fc89d99bd6c7085150c8f8625)
+[Github Contribution Heatmap](https://i.redd.it/8lmadge8r0ky.jpg)
 
 I'd been feeling some burnout lately as all my professional and personal work happens in front of a screen sitting on the same desk at home. But even taking some time away to refresh can make you feel guilty when you are tracking your progress on tools like Trello or the Github Contribution charts like above!
 
