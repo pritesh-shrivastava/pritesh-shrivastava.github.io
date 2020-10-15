@@ -49,7 +49,7 @@ I completed 10 more learning goals in 2018, and another 22 in 2019. This year, I
 So far so good, right? But that's not the entire story. It's clear that productivity tools like Trello motivate you to do more and be more ambitious. I've definitely been able to overcome the problems of procrastination and overthinking by this approach. But I feel like they introduce some new problems into your life as well.
 
 Firstly, these hacks and tools can increase your **anxiety** levels, with all the pending lists of to-dos and looming deadlines. Now, some amout of anxiety is good as it pushes you to get up and do something. But it can also make you feel guilty if you're not "productive enough". I think the below meme perfectly captures this feeling of guilt and anxeity:
-[Github Contribution Heatmap](https://i.redd.it/8lmadge8r0ky.jpg)
+![Github Contribution Heatmap](https://i.redd.it/8lmadge8r0ky.jpg)
 
 I'd been feeling some burnout lately as all my professional and personal work happens in front of a screen sitting on the same desk at home. But even taking some time away to refresh can make you feel guilty when you are tracking your progress on tools like Trello or the Github Contribution charts like above!
 
@@ -59,4 +59,4 @@ Secondly, and perhaps more importantly, it increases your **ego**. This whole ac
 A small step that I'm taking right now is to delete all my old Trello lists & past goals. I never deleted them in the past because I would cherish them all as accomplishments. So just tossing them away might help shed of that baggage. Something else that I'm trying to do now is to include others in my "selfish" list of goals. Sharing my learnings on this blog with others can be one way of doing just that.
 
 
-So these are some of my (half-baked?) thoughts around using productivity hacks and tools in your personal life. You can use these tools to hack / fool your mind into the trap of productivity and ambition. This trap is mostly beneficial to you but it can end up creating new problems as well. If you agree or disagree with any of these opinions let me know in the comments section as well!
+So these are some of my (half-baked) thoughts around using productivity hacks and tools in your personal life. You can use these tools to hack / fool your mind into the trap of productivity and ambition. This trap is mostly beneficial to you but it can end up creating new problems as well. If you agree or disagree with any of these opinions, let me know in the comments section below!
