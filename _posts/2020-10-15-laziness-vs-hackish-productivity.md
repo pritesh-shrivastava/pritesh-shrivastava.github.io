@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Laziness vs Hackish Productivity"
+title: "Laziness vs The Trap of Productivity & Ambition"
 date: 2020-10-15
 comments: true
 ---
@@ -14,19 +14,19 @@ The [Cult of the Done Manifesto](https://www.fastcompany.com/1665527/infographic
 
 #### The Done Manifesto
 
-    1. There are three states of being. Not knowing, action and completion.
-    2. Accept that everything is a draft. It helps to get done.
-    3. There is no editing stage.
-    4. Pretending you know what you’re doing is almost the same as knowing what you are doing, so just accept that you know what you’re doing even if you don’t and do it.
-    5. Banish procrastination. If you wait more than a week to get an idea done, abandon it.
-    6. The point of being done is not to finish but to get other things done.
-    7. Once you’re done you can throw it away.
-    8. Laugh at perfection. It’s boring and keeps you from being done.
-    9. People without dirty hands are wrong. Doing something makes you right.
-    10.Failure counts as done. So do mistakes.
-    11. Destruction is a variant of done.
-    12. If you have an idea and publish it on the internet, that counts as a ghost of done.
-    13. Done is the engine of more.
+1. There are three states of being. Not knowing, action and completion.
+2. Accept that everything is a draft. It helps to get done.
+3. There is no editing stage.
+4. Pretending you know what you’re doing is almost the same as knowing what you are doing, so just accept that you know what you’re doing even if you don’t and do it.
+5. Banish procrastination. If you wait more than a week to get an idea done, abandon it.
+6. The point of being done is not to finish but to get other things done.
+7. Once you’re done you can throw it away.
+8. Laugh at perfection. It’s boring and keeps you from being done.
+9. People without dirty hands are wrong. Doing something makes you right.
+10.Failure counts as done. So do mistakes.
+11. Destruction is a variant of done.
+12. If you have an idea and publish it on the internet, that counts as a ghost of done.
+13. Done is the engine of more.
 
 
 I also really like the idea of incremental and iterative "sprints" in the Scrum framework. There is something fun and addictive about marking a task as done or moving a card from 1 pane to another on a scrum board every day. In a hope to get similar motivation for my personal goals related to learning or side projects, I began tracking down my yearly goals on my own personal [Trello](https://trello.com/) board, which I've been maintaining for roughly 4 years now :
