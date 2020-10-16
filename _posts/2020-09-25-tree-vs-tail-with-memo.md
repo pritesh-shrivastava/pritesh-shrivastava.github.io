@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tree vs Tail Recursion & Memoization"
+excerpt: "Comparing Tree Recursion & Tail Recursion in Scheme & Python"
 date: 2020-09-25
 tags:
     - lisp

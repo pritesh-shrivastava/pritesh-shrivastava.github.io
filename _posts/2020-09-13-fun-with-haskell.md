@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Fun with Haskell"
+excerpt: "My notes halfway through Learn You A Haskell"
 date: 2020-09-13
 tags:
     - haskell
