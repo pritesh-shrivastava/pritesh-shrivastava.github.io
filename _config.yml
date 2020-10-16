@@ -108,12 +108,15 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pritesh-shrivastava"
+    - label: "Kaggle"
+      icon: "fab fa-kaggle"
+      url: "https://www.kaggle.com/priteshshrivastava"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/pritesh_shri"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/pritesh_shri"
+#    - label: "Instagram"
+#      icon: "fab fa-fw fa-instagram"
+#      url: "https://instagram.com/pritesh_shri"
 
 
 # Site Footer
