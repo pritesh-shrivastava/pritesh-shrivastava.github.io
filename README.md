@@ -22,6 +22,7 @@ bundle exec jekyll serve --future
 - Check PageSpeed suggestions from Google Analytics if score < 90% for a page
 - Add Disqus activity to Google Analytics as goals or events - responses & comments
 - Wanna clean GA / comments according to MM ? They are both working currently. Changing it might lead to loss of old comments / responses or page views!
+- Add profile links to Kaggle, Goodreads, Soundcloud in sidebar or bottom
 
 
 #### Blog post ideas
