@@ -10,7 +10,7 @@ comments: true
 ---
 
 I started tracking my reading activity on the Goodreads app ~ 6 years ago. Why? Because Bertrand Russell once famously said, 
->“There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it (on Goodreads).”
+>“There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it on Goodreads.”
 
 Okay, I'm joking about the second part! But I've actually found the Goodreads annual [Reading Challenges](https://www.goodreads.com/challenges/11621-2020-reading-challenge) to be a good motivation to read more books. It's a simple pledge you make to read a certain no. of books a year, but since it's tracked publicly on a social media site, you end up completing the challenge more often than not, out of vanity, if not, motivation.
 
