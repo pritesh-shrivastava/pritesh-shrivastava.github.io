@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Analyzing my Goodreads data"
-excerpt: "Simple EDA using tidyverse and R Markdown"
+excerpt: "Simple EDA using tidyverse on R Markdown"
 date: 2020-10-26
 tags:
   - R
@@ -171,7 +171,7 @@ library(cowplot) ## To print 2 plots side by side
 plot_grid(count_plot, pages_plot)
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 While the no. of books I read in the last 5 years have stayed roughly the same, the no. of pages I read were the highest in 2016. Am I past my peak now :O
 
@@ -187,7 +187,7 @@ books %>%
   geom_histogram(bins=50)
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-8-1.png) It seems most books are over within a year.
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-8-1.png) It seems most books are over within a year.
 
 Checking months with maximum activity
 -------------------------------------
@@ -214,7 +214,7 @@ pages_month <- books %>%
 plot_grid(count_month, pages_month)
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-9-1.png) Ha, that's the effect of the annual Reading Challenge on Goodreads. I read the most at the start of the year, with motivation to finish the new challenge, and then again, at the end of the year, out of the fear of the pending deadline!
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-9-1.png) Ha, that's the effect of the annual Reading Challenge on Goodreads. I read the most at the start of the year, with motivation to finish the new challenge, and then again, at the end of the year, out of the fear of the pending deadline!
 
 But notice the pages read per month for the month of December. Even though the count of books in December is roughly the same as that of January, the count of pages read is substantially lower! This rightly illustrates that I end up reading much shorter books towards the end of the year in order to meet the goals. So I do end up sacrificing on my reading quality vs quantity for the challenge.
 
@@ -233,7 +233,7 @@ books %>%
   scale_fill_viridis_c()
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-10-1.png) I really slacked out last year it seems, with some months of no activity and then a sudden burst of activity at the end of the year to meet the challenge.
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-10-1.png) I really slacked out last year it seems, with some months of no activity and then a sudden burst of activity at the end of the year to meet the challenge.
 
 Format of books acros the years
 -------------------------------
@@ -259,7 +259,7 @@ books %>%
   geom_line(aes(x = Year_Read, y = count, group = Format, colour = Format))
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-11-1.png) There is no clear trend here, however, paperback tends to dominate. I have been using the [Audible](https://www.audible.com/) app from Amazon to recently as well and I found it to be really great!
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-11-1.png) There is no clear trend here, however, paperback tends to dominate. I have been using the [Audible](https://www.audible.com/) app from Amazon to recently as well and I found it to be really great!
 
 Let's look at the ratings
 -------------------------
@@ -276,7 +276,7 @@ books %>%
   ylim(1, 5)
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-12-1.png) So I ended up picking books with an average rating in the range of 2.5 to 4.5. Most of the books I rated low (1 or 2) do seem to be the smaller in size comparitively. Again, these could be some of the quick reads I picked up just to meet the annual goals.
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-12-1.png) So I ended up picking books with an average rating in the range of 2.5 to 4.5. Most of the books I rated low (1 or 2) do seem to be the smaller in size comparitively. Again, these could be some of the quick reads I picked up just to meet the annual goals.
 
 Original Publication Year vs Date Read & My Rating
 --------------------------------------------------
@@ -291,7 +291,7 @@ books %>%
   scale_color_viridis_c()
 ```
 
-![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
 So I have read a few classical books lately, dating back to 500 BC. There seems to be no visible connection between the publication year and the rating though.
 
