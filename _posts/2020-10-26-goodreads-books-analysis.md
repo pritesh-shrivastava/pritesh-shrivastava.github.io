@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "Analyzing my Goodreads data"
-excerpt: "Simple EDA using tidyverse on R Markdown"
+excerpt: "Simple EDA of my reading activity using tidyverse on R Markdown"
 date: 2020-10-26
 tags:
   - R
