@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+classes: wide
 title: "Analyzing my Goodreads data"
 excerpt: "Simple EDA using tidyverse on R Markdown"
 date: 2020-10-26
