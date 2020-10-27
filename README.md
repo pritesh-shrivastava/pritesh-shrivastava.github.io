@@ -38,4 +38,11 @@ bundle exec jekyll serve --future
 #### Promotion
 - Cross publish articles to Medium / HN
 - Reddit / Slack / Twitter / LinkedIn
+- Publish R blogs on R-blogger : Need a separate RSS feed for posts with tag / category R!
+    https://www.r-bloggers.com/add-your-blog/
+    Solutions - 
+    [1] https://gist.github.com/hunleyd/95d2081d339bddd45dd4189275892a13
+    [2] https://github.com/oxinabox/oxinabox.github.io/blob/master/rssfeed_julia.xml#L13
+    
+- 
 
