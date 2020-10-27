@@ -1,17 +1,4 @@
----
-layout: single
-classes: wide
-title: "Analyzing my Goodreads data"
-excerpt: "Simple EDA of my reading activity using tidyverse on R Markdown"
-date: 2020-10-26
-tags:
-  - R
-  - tidyverse
-comments: true
----
-
-I started tracking my reading activity on the Goodreads app ~ 6 years ago. Why? Because Bertrand Russell once famously said, 
->“There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it on Goodreads.”
+I started tracking my reading activity on the Goodreads app ~ 6 years ago. Why? Because Bertrand Russell once famously said, &gt;“There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it (on Goodreads).”
 
 Okay, I'm joking about the second part! But I've actually found the Goodreads annual [Reading Challenges](https://www.goodreads.com/challenges/11621-2020-reading-challenge) to be a good motivation to read more books. It's a simple pledge you make to read a certain no. of books a year, but since it's tracked publicly on a social media site, you end up completing the challenge more often than not, out of vanity, if not, motivation.
 
@@ -135,7 +122,6 @@ glimpse(books)
     ## $ Month_Read                  <ord> Oct, NA, NA, NA, NA, Sep, Sep, NA, S…
     ## $ Days_Taken                  <dbl> 69, NA, NA, NA, NA, 36, 40, NA, 25, …
 
-
 Count of books by shelves
 -------------------------
 
@@ -178,7 +164,7 @@ library(cowplot) ## To print 2 plots side by side
 plot_grid(count_plot, pages_plot)
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 While the no. of books I read in the last 5 years have stayed roughly the same, the no. of pages I read were the highest in 2016. Am I past my peak now :O
 
@@ -194,9 +180,7 @@ books %>%
   geom_histogram(bins=50)
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-8-1.png) 
-
-It seems most books are over within a year.
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-8-1.png) It seems most books are over within a year.
 
 Checking months with maximum activity
 -------------------------------------
@@ -223,9 +207,7 @@ pages_month <- books %>%
 plot_grid(count_month, pages_month)
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-9-1.png) 
-
-Ha, that's the effect of the annual Reading Challenge on Goodreads. I read the most at the start of the year, with motivation to finish the new challenge, and then again, at the end of the year, out of the fear of the pending deadline!
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-9-1.png) Ha, that's the effect of the annual Reading Challenge on Goodreads. I read the most at the start of the year, with motivation to finish the new challenge, and then again, at the end of the year, out of the fear of the pending deadline!
 
 But notice the pages read per month for the month of December. Even though the count of books in December is roughly the same as that of January, the count of pages read is substantially lower! This rightly illustrates that I end up reading much shorter books towards the end of the year in order to meet the goals. So I do end up sacrificing on my reading quality vs quantity for the challenge.
 
@@ -244,9 +226,7 @@ books %>%
   scale_fill_viridis_c()
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-10-1.png) 
-
-I really slacked out last year it seems, with some months of no activity and then a sudden burst of activity at the end of the year to meet the challenge.
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-10-1.png) I really slacked out last year it seems, with some months of no activity and then a sudden burst of activity at the end of the year to meet the challenge.
 
 Format of books acros the years
 -------------------------------
@@ -272,9 +252,7 @@ books %>%
   geom_line(aes(x = Year_Read, y = count, group = Format, colour = Format))
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-11-1.png) 
-
-There is no clear trend here, however, paperback tends to dominate. I have been using the [Audible](https://www.audible.com/) app from Amazon to recently as well and I found it to be really great!
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-11-1.png) There is no clear trend here, however, paperback tends to dominate. I have been using the [Audible](https://www.audible.com/) app from Amazon to recently as well and I found it to be really great!
 
 Let's look at the ratings
 -------------------------
@@ -291,9 +269,7 @@ books %>%
   ylim(1, 5)
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-12-1.png) 
-
-So I ended up picking books with an average rating in the range of 2.5 to 4.5. Most of the books I rated low (1 or 2) do seem to be the smaller in size comparitively. Again, these could be some of the quick reads I picked up just to meet the annual goals.
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-12-1.png) So I ended up picking books with an average rating in the range of 2.5 to 4.5. Most of the books I rated low (1 or 2) do seem to be the smaller in size comparitively. Again, these could be some of the quick reads I picked up just to meet the annual goals.
 
 Original Publication Year vs Date Read & My Rating
 --------------------------------------------------
@@ -308,12 +284,6 @@ books %>%
   scale_color_viridis_c()
 ```
 
-![](/assets/images/goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](goodreads_books_analysis_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
-So I have read a few classical books lately, dating back to 500 BC. There seems to be no visible connection between the publication year and the rating though.
-
-
-## Conclusion
-
-I wrote this post on R Markdown to demonstrate how R, with the tidyverse ecosystem, makes data wrangling as smooth as cutting butter with a knife. I hope SQL or Python users, or complete newbies as well, might get interested in trying out R for their data analysis needs.
-As for me personally, I learnt that I need to setup smaller acheivable goals on Goodreads moving forward and focus more on quality than the quantity of books I read :D
+So I have read a few classical books lately, dating back to 500 BC. I've also added my rating for the book as a color to the scatter plot.

@@ -62,7 +62,7 @@ books %<>%
                               NA_real_)
          )
 
-sample_n(books, 5)
+glimpse(books)
 ```
 
 ## Count of books by shelves
