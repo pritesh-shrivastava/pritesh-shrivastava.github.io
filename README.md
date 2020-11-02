@@ -25,15 +25,17 @@ bundle exec jekyll serve --future
 
 
 #### Blog post ideas
-- Add discussion topics from Kaggle
 - Kaggle competitions
 - Add notes from Evernote - Professional
 - Add book reviews & MOOC reviews
 - Prog Lang course
 - More Haskell - Monoid, purity
-- HtDP ?
+- HtDP exercise on dictionary - Ch 2 Ex199-204 + Word combinations
 - College / branch vs career
 - Insertion sort from Racket code in HtDP - helper functions that recur
+- Classification & k-means clustering of prog lang text - Kaggle Dataset
+- Image processing (ala CS50 assignment) in R / Julia
+- 
 
 #### Promotion
 - Cross publish articles to Medium / HN
