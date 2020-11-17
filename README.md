@@ -14,6 +14,7 @@ bundle exec jekyll serve --future
 ## Next steps
 
 #### Site improvements
+- Add link to Facebook profile ?
 - Add Resume & other Project details with Git repos
 - Import stats from Goodreads profile
 - Add categories / collections for post links from mm ?
@@ -35,7 +36,7 @@ bundle exec jekyll serve --future
 - Insertion sort from Racket code in HtDP - helper functions that recur
 - Classification & k-means clustering of prog lang text - Kaggle Dataset
 - Image processing (ala CS50 assignment) in R / Julia
-- 
+- Gender classification based on movie dialogues from Cornell dataset on Kaggle (2 part post), also have research paper to back up
 
 #### Promotion
 - Cross publish articles to Medium / HN
