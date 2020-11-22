@@ -1262,7 +1262,7 @@ sns.boxplot(data = train, x = 'gender', y = 'chId_count', hue = 'gender')
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_35_1.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_35_1.png)
 
 
 
@@ -1278,7 +1278,7 @@ sns.boxplot(data = train, x = 'gender', y = 'wordCountLine_median', hue = 'gende
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_36_1.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_36_1.png)
 
 
 
@@ -1294,7 +1294,7 @@ sns.boxplot(data = train, x = 'gender', y = 'lineLength_median', hue = 'gender')
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_37_1.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_37_1.png)
 
 
 
@@ -1310,7 +1310,7 @@ sns.scatterplot(data = train, x = 'wordCountLine_median', y = 'chId_count', hue 
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_38_1.png)
+![png](/assets/images//gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_38_1.png)
 
 
 ### Train test split
@@ -1715,19 +1715,19 @@ results("Random Forest" , rf_clf)
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_1.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_1.png)
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_2.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_2.png)
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_3.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_3.png)
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
 
 
 We are getting accuracy in the range of 70-75% for most of the models, which is pretty good. 
@@ -2042,7 +2042,7 @@ results("Decision Tree Classifier", dt_clf)
 
 
 
-![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_69_1.png)
+![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_69_1.png)
 
 
 While a single decision is a poor classifier with accuracy barely more than 50%, we see that bagging enough of such weak classifiers to form a Random Forest model helps us improve the model performance drastically! Let's look at how the splits are made for a single decision tree.
@@ -2056,7 +2056,7 @@ draw_tree(m.estimators_[0], X_train, precision=2)
 ```
 
 
-![svg](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
+![svg](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
 
 
 Here the blue colored nodes indicate their majority class is "female" while the orange colored nodes have a majority of "male" labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens.
