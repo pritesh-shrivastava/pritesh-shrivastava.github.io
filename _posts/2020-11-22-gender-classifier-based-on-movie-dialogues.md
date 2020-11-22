@@ -1672,46 +1672,49 @@ results("Naive Bayes" , nb_clf)
 results("Random Forest" , rf_clf)
 ```
 
-    SVC score: 0.721
+    SVC score: 0.787
                   precision    recall  f1-score   support
     
-               0       0.74      0.69      0.71       190
-               1       0.71      0.75      0.73       190
+               0       0.77      0.82      0.79       190
+               1       0.80      0.76      0.78       190
+    
+        accuracy                           0.79       380
+       macro avg       0.79      0.79      0.79       380
+    weighted avg       0.79      0.79      0.79       380
+    
+    Logistic Regression score: 0.768
+                  precision    recall  f1-score   support
+    
+               0       0.77      0.77      0.77       190
+               1       0.77      0.76      0.77       190
+    
+        accuracy                           0.77       380
+       macro avg       0.77      0.77      0.77       380
+    weighted avg       0.77      0.77      0.77       380
+    
+    Naive Bayes score: 0.761
+                  precision    recall  f1-score   support
+    
+               0       0.74      0.80      0.77       190
+               1       0.78      0.72      0.75       190
+    
+        accuracy                           0.76       380
+       macro avg       0.76      0.76      0.76       380
+    weighted avg       0.76      0.76      0.76       380
+    
+    Random Forest score: 0.721
+                  precision    recall  f1-score   support
+    
+               0       0.72      0.72      0.72       190
+               1       0.72      0.72      0.72       190
     
         accuracy                           0.72       380
        macro avg       0.72      0.72      0.72       380
     weighted avg       0.72      0.72      0.72       380
     
-    Logistic Regression score: 0.718
-                  precision    recall  f1-score   support
-    
-               0       0.74      0.68      0.71       190
-               1       0.70      0.76      0.73       190
-    
-        accuracy                           0.72       380
-       macro avg       0.72      0.72      0.72       380
-    weighted avg       0.72      0.72      0.72       380
-    
-    Naive Bayes score: 0.708
-                  precision    recall  f1-score   support
-    
-               0       0.70      0.73      0.71       190
-               1       0.72      0.68      0.70       190
-    
-        accuracy                           0.71       380
-       macro avg       0.71      0.71      0.71       380
-    weighted avg       0.71      0.71      0.71       380
-    
-    Random Forest score: 0.705
-                  precision    recall  f1-score   support
-    
-               0       0.71      0.69      0.70       190
-               1       0.70      0.72      0.71       190
-    
-        accuracy                           0.71       380
-       macro avg       0.71      0.71      0.71       380
-    weighted avg       0.71      0.71      0.71       380
-    
+
+
+
 
 
 
