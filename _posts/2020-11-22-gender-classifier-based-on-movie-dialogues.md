@@ -2130,16 +2130,7 @@ While a single decision is a poor classifier with accuracy barely more than 50%,
 
 
 ```python
-def draw_tree(t, df, size=10, ratio=0.6, precision=0):
-    """ 
-    Draws a representation of a decition tree in IPython from fastai v0.7
-    """
-    s=export_graphviz(t, out_file=None, feature_names=numeric_features_list, filled=True,
-                      special_characters=True, rotate=True, precision=precision, 
-                      proportion=True, class_names = ["male", "female"], impurity = False)
-    IPython.display.display(graphviz.Source(re.sub('Tree {}',
-       f'Tree {{ size={size}; ratio={ratio}}}', s)))
-
+##  Draws a representation of a decition tree in IPython from fastai v0.7
 draw_tree(m.estimators_[0], X_train, precision=2)
 ```
 
