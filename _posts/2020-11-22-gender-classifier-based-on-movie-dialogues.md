@@ -2058,10 +2058,20 @@ While a single decision is a poor classifier with accuracy barely more than 50%,
 
 
 ```python
+'''
+def draw_tree(t, df, size=10, ratio=0.6, precision=0):
+    """ 
+    Draws a representation of a decition tree in IPython. Source : fastai v0.7
+    Have commented the function definition here due to a Jekyll build error related to Liquid objects.
+    """
+    s=export_graphviz(t, out_file=None, feature_names=numeric_features_list, filled=True,
+                      special_characters=True, rotate=True, precision=precision, 
+                      proportion=True, class_names = ["male", "female"], impurity = False)
+    IPython.display.display(graphviz.Source(re.sub('Tree {',
+       f'Tree {{ size={size}; ratio={ratio}', s)))
+'''
+
 draw_tree(m.estimators_[0], X_train, precision=2)
-## Draws a representation of a decition tree in IPython. Source : fastai v0.7
-## Have removed function definition here due to a Jekyll build error related to Liquid objects.
-## Check the Jupyter notebook uploaded on Kaggle below for the function definition.
 ```
 
 
@@ -2291,3 +2301,6 @@ eli5.explain_weights_df(rf_clf.named_steps['classifier'], top=30, feature_names=
 
 
 We see that the median length of a dialogue, total no of lines (`chId_count`) & position in the post credits in a movie are important features along with the tokens extracted from the character's dialogues for the Random Forest model!
+
+
+The complete Jupyter notebook is available on Kaggle [here](https://www.kaggle.com/priteshshrivastava/gender-classifier-based-on-movie-dialogues)
