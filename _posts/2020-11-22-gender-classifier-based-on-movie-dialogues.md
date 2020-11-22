@@ -618,7 +618,7 @@ df.shape
 
 
 
-Adding movie metadata like year of release to the dataset
+Let's check what kind of movie metadata we can add to our dataset.
 
 
 ```python
@@ -715,90 +715,9 @@ movies.head()
 movie_yr = movies[['mId', 'releaseYear']]
 movie_yr.releaseYear = pd.to_numeric(movie_yr.releaseYear.apply(lambda y: str(y)[0:4]), errors='coerce')
 movie_yr = movie_yr.dropna()
-movie_yr.releaseYear.value_counts()
 ```
 
-
-
-
-    1999.0    42
-    2000.0    41
-    1997.0    38
-    1998.0    37
-    2001.0    30
-    1996.0    24
-    1995.0    22
-    1992.0    19
-    1989.0    19
-    1994.0    19
-    1993.0    18
-    2002.0    18
-    2003.0    16
-    1987.0    15
-    2004.0    14
-    1991.0    14
-    1982.0    14
-    1988.0    13
-    1985.0    11
-    1986.0    11
-    1990.0    11
-    1984.0    11
-    2005.0     9
-    1975.0     9
-    1979.0     8
-    1971.0     7
-    1980.0     6
-    2006.0     6
-    1983.0     5
-    2007.0     5
-    1978.0     5
-    1974.0     5
-    1977.0     4
-    1973.0     4
-    1932.0     4
-    1976.0     4
-    1964.0     3
-    2009.0     3
-    1953.0     3
-    1972.0     3
-    1939.0     3
-    1954.0     3
-    1934.0     3
-    1943.0     3
-    1981.0     3
-    1949.0     3
-    1968.0     3
-    1955.0     3
-    1960.0     3
-    1959.0     3
-    1945.0     2
-    1940.0     2
-    1931.0     2
-    1927.0     2
-    1961.0     2
-    1966.0     2
-    1963.0     2
-    1933.0     2
-    1970.0     2
-    1950.0     2
-    1967.0     2
-    1941.0     2
-    1936.0     1
-    2010.0     1
-    1944.0     1
-    2008.0     1
-    1942.0     1
-    1937.0     1
-    1946.0     1
-    1965.0     1
-    1957.0     1
-    1958.0     1
-    1956.0     1
-    1969.0     1
-    Name: releaseYear, dtype: int64
-
-
-
+We will just add the year of movie release to our dataset. 
 
 ```python
 df = pd.merge(df, movie_yr, how='inner', on=['mId'],
