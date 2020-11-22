@@ -1796,19 +1796,19 @@ results("Random Forest" , rf_clf)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_1.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_1.png)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_2.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_2.png)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_3.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_3.png)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
 
 
 We are getting accuracy in the range of 70-75% for most of the models, which is pretty good. 
@@ -2123,7 +2123,7 @@ results("Decision Tree Classifier", dt_clf)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_69_1.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_69_1.png)
 
 
 While a single decision is a poor classifier with accuracy barely more than 50%, we see that bagging enough of such weak classifiers to form a Random Forest model helps us improve the model performance drastically! Let's look at how the splits are made for a single decision tree.
@@ -2138,7 +2138,7 @@ def draw_tree(t, df, size=10, ratio=0.6, precision=0):
                       special_characters=True, rotate=True, precision=precision, 
                       proportion=True, class_names = ["male", "female"], impurity = False)
     IPython.display.display(graphviz.Source(re.sub('Tree {',
-       f'Tree {{ size={size}; ratio={ratio}', s)))
+       f'Tree {{ size={size}; ratio={ratio}}}', s)))
 
 draw_tree(m.estimators_[0], X_train, precision=2)
 ```

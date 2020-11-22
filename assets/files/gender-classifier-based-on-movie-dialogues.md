@@ -322,8 +322,8 @@ characters_df.posCredits.value_counts()
     13       33
     12       32
     16       26
-    18       24
     14       24
+    18       24
     17       19
     19       18
     15       14
@@ -332,37 +332,37 @@ characters_df.posCredits.value_counts()
     20        8
     29        7
     27        6
+    24        5
     25        5
     26        5
-    24        5
-    35        4
-    23        4
     45        4
+    23        4
     31        4
-    34        3
-    43        3
+    35        4
     38        3
+    43        3
     33        3
-    42        2
+    34        3
     36        2
-    32        2
     59        2
     39        2
     30        2
+    42        2
     28        2
+    32        2
     51        1
-    50        1
-    41        1
-    49        1
     82        1
     44        1
+    70        1
+    46        1
+    41        1
     63        1
     37        1
-    71        1
-    46        1
+    50        1
+    49        1
     47        1
-    70        1
     62        1
+    71        1
     Name: posCredits, dtype: int64
 
 
@@ -605,6 +605,294 @@ df.shape
 
 
 
+Adding movie metadata like year of release to the dataset
+
+
+```python
+movies = pd.read_csv("../input/movie_titles_metadata.tsv", sep='\t', error_bad_lines=False,
+                       warn_bad_lines=False, header=None)
+movies.columns = ['mId','mName','releaseYear','rating','votes','genres']
+
+movies.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mId</th>
+      <th>mName</th>
+      <th>releaseYear</th>
+      <th>rating</th>
+      <th>votes</th>
+      <th>genres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>m0</td>
+      <td>10 things i hate about you</td>
+      <td>1999</td>
+      <td>6.9</td>
+      <td>62847.0</td>
+      <td>['comedy' 'romance']</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>m1</td>
+      <td>1492: conquest of paradise</td>
+      <td>1992</td>
+      <td>6.2</td>
+      <td>10421.0</td>
+      <td>['adventure' 'biography' 'drama' 'history']</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>m2</td>
+      <td>15 minutes</td>
+      <td>2001</td>
+      <td>6.1</td>
+      <td>25854.0</td>
+      <td>['action' 'crime' 'drama' 'thriller']</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>m3</td>
+      <td>2001: a space odyssey</td>
+      <td>1968</td>
+      <td>8.4</td>
+      <td>163227.0</td>
+      <td>['adventure' 'mystery' 'sci-fi']</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>m4</td>
+      <td>48 hrs.</td>
+      <td>1982</td>
+      <td>6.9</td>
+      <td>22289.0</td>
+      <td>['action' 'comedy' 'crime' 'drama' 'thriller']</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+movie_yr = movies[['mId', 'releaseYear']]
+movie_yr.releaseYear = pd.to_numeric(movie_yr.releaseYear.apply(lambda y: str(y)[0:4]), errors='coerce')
+movie_yr = movie_yr.dropna()
+movie_yr.releaseYear.value_counts()
+```
+
+
+
+
+    1999.0    42
+    2000.0    41
+    1997.0    38
+    1998.0    37
+    2001.0    30
+    1996.0    24
+    1995.0    22
+    1992.0    19
+    1989.0    19
+    1994.0    19
+    1993.0    18
+    2002.0    18
+    2003.0    16
+    1987.0    15
+    2004.0    14
+    1991.0    14
+    1982.0    14
+    1988.0    13
+    1985.0    11
+    1986.0    11
+    1990.0    11
+    1984.0    11
+    2005.0     9
+    1975.0     9
+    1979.0     8
+    1971.0     7
+    1980.0     6
+    2006.0     6
+    1983.0     5
+    2007.0     5
+    1978.0     5
+    1974.0     5
+    1977.0     4
+    1973.0     4
+    1932.0     4
+    1976.0     4
+    1964.0     3
+    2009.0     3
+    1953.0     3
+    1972.0     3
+    1939.0     3
+    1954.0     3
+    1934.0     3
+    1943.0     3
+    1981.0     3
+    1949.0     3
+    1968.0     3
+    1955.0     3
+    1960.0     3
+    1959.0     3
+    1945.0     2
+    1940.0     2
+    1931.0     2
+    1927.0     2
+    1961.0     2
+    1966.0     2
+    1963.0     2
+    1933.0     2
+    1970.0     2
+    1950.0     2
+    1967.0     2
+    1941.0     2
+    1936.0     1
+    2010.0     1
+    1944.0     1
+    2008.0     1
+    1942.0     1
+    1937.0     1
+    1946.0     1
+    1965.0     1
+    1957.0     1
+    1958.0     1
+    1956.0     1
+    1969.0     1
+    Name: releaseYear, dtype: int64
+
+
+
+
+```python
+df = pd.merge(df, movie_yr, how='inner', on=['mId'],
+         left_index=False, right_index=False, sort=True,
+         copy=False, indicator=False)
+df.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>lineId</th>
+      <th>chId</th>
+      <th>mId</th>
+      <th>chName</th>
+      <th>dialogue</th>
+      <th>mName</th>
+      <th>gender</th>
+      <th>posCredits</th>
+      <th>releaseYear</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>L1045</td>
+      <td>u0</td>
+      <td>m0</td>
+      <td>BIANCA</td>
+      <td>They do not!</td>
+      <td>10 things i hate about you</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1999.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>L985</td>
+      <td>u0</td>
+      <td>m0</td>
+      <td>BIANCA</td>
+      <td>I hope so.</td>
+      <td>10 things i hate about you</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1999.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>L925</td>
+      <td>u0</td>
+      <td>m0</td>
+      <td>BIANCA</td>
+      <td>Let's go.</td>
+      <td>10 things i hate about you</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1999.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>L872</td>
+      <td>u0</td>
+      <td>m0</td>
+      <td>BIANCA</td>
+      <td>Okay -- you're gonna need to learn how to lie.</td>
+      <td>10 things i hate about you</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1999.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>L869</td>
+      <td>u0</td>
+      <td>m0</td>
+      <td>BIANCA</td>
+      <td>Like my fear of wearing pastels?</td>
+      <td>10 things i hate about you</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1999.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 ## Feature Engineering
 - Length of lines
 - Count of lines
@@ -646,6 +934,7 @@ df.head()
       <th>mName</th>
       <th>gender</th>
       <th>posCredits</th>
+      <th>releaseYear</th>
       <th>lineLength</th>
       <th>wordCountLine</th>
     </tr>
@@ -661,6 +950,7 @@ df.head()
       <td>10 things i hate about you</td>
       <td>1</td>
       <td>4</td>
+      <td>1999.0</td>
       <td>12</td>
       <td>3</td>
     </tr>
@@ -674,6 +964,7 @@ df.head()
       <td>10 things i hate about you</td>
       <td>1</td>
       <td>4</td>
+      <td>1999.0</td>
       <td>10</td>
       <td>3</td>
     </tr>
@@ -687,6 +978,7 @@ df.head()
       <td>10 things i hate about you</td>
       <td>1</td>
       <td>4</td>
+      <td>1999.0</td>
       <td>9</td>
       <td>2</td>
     </tr>
@@ -700,6 +992,7 @@ df.head()
       <td>10 things i hate about you</td>
       <td>1</td>
       <td>4</td>
+      <td>1999.0</td>
       <td>46</td>
       <td>10</td>
     </tr>
@@ -713,6 +1006,7 @@ df.head()
       <td>10 things i hate about you</td>
       <td>1</td>
       <td>4</td>
+      <td>1999.0</td>
       <td>32</td>
       <td>6</td>
     </tr>
@@ -726,8 +1020,7 @@ Next, let's convert the dialogues into clean tokens
 <ol>
 <li>Remove Stopwords : because they occur very often, but serve no meaning. e.g. : is,am,are,the.</li>
 <li>Turn all word to smaller cases : I, i -> i</li>
-<li>walk,walks -> walk</li>  #Lemmatization
-<li>geographical,geographic -> geographic</li>  #Lemmatization
+<li>walk,walks -> walk or geographical,geographic -> geographic</li>  #Lemmatization
 </ol>
 
 
@@ -824,7 +1117,7 @@ Now, we can aggregate all data for a particular movie character into 1 record. W
 
 
 ```python
-train = df.groupby(['chId', 'mId', 'chName', 'gender', 'posCredits']). \
+train = df.groupby(['chId', 'mId', 'chName', 'gender', 'posCredits','releaseYear']). \
             agg({'lineLength' : ['median'], 
                  'wordCountLine' : ['median'],
                  'chId' : ['count'],
@@ -864,6 +1157,7 @@ train
       <th>chName</th>
       <th>gender</th>
       <th>posCredits</th>
+      <th>releaseYear</th>
       <th>lineLength_median</th>
       <th>wordCountLine_median</th>
       <th>chId_count</th>
@@ -878,6 +1172,7 @@ train
       <td>BIANCA</td>
       <td>1</td>
       <td>4</td>
+      <td>1999.0</td>
       <td>34.0</td>
       <td>7.0</td>
       <td>94</td>
@@ -890,6 +1185,7 @@ train
       <td>AMY</td>
       <td>1</td>
       <td>7</td>
+      <td>1999.0</td>
       <td>23.0</td>
       <td>4.0</td>
       <td>31</td>
@@ -902,6 +1198,7 @@ train
       <td>RICHARD</td>
       <td>0</td>
       <td>3</td>
+      <td>1996.0</td>
       <td>24.5</td>
       <td>5.0</td>
       <td>70</td>
@@ -914,6 +1211,7 @@ train
       <td>SETH</td>
       <td>0</td>
       <td>2</td>
+      <td>1996.0</td>
       <td>37.0</td>
       <td>8.0</td>
       <td>163</td>
@@ -926,6 +1224,7 @@ train
       <td>C.O.</td>
       <td>0</td>
       <td>10+</td>
+      <td>1997.0</td>
       <td>48.0</td>
       <td>9.0</td>
       <td>33</td>
@@ -933,6 +1232,7 @@ train
     </tr>
     <tr>
       <th>...</th>
+      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -950,6 +1250,7 @@ train
       <td>VICTOR</td>
       <td>0</td>
       <td>3</td>
+      <td>1931.0</td>
       <td>32.0</td>
       <td>6.0</td>
       <td>126</td>
@@ -962,6 +1263,7 @@ train
       <td>ALICE</td>
       <td>1</td>
       <td>10+</td>
+      <td>2009.0</td>
       <td>30.0</td>
       <td>6.0</td>
       <td>51</td>
@@ -974,6 +1276,7 @@ train
       <td>BILL</td>
       <td>0</td>
       <td>10+</td>
+      <td>2009.0</td>
       <td>20.0</td>
       <td>4.0</td>
       <td>39</td>
@@ -986,6 +1289,7 @@ train
       <td>JACOB</td>
       <td>0</td>
       <td>1</td>
+      <td>1996.0</td>
       <td>36.0</td>
       <td>6.0</td>
       <td>90</td>
@@ -998,6 +1302,7 @@ train
       <td>KATE</td>
       <td>1</td>
       <td>4</td>
+      <td>1996.0</td>
       <td>20.0</td>
       <td>4.5</td>
       <td>44</td>
@@ -1005,7 +1310,7 @@ train
     </tr>
   </tbody>
 </table>
-<p>2951 rows × 9 columns</p>
+<p>2951 rows × 10 columns</p>
 </div>
 
 
@@ -1020,12 +1325,12 @@ sns.boxplot(data = train, x = 'gender', y = 'chId_count', hue = 'gender')
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f7d4a9d3990>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fe92d3d57d0>
 
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_31_1.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_35_1.png)
 
 
 
@@ -1036,12 +1341,12 @@ sns.boxplot(data = train, x = 'gender', y = 'wordCountLine_median', hue = 'gende
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f7d4a756fd0>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fe92d108550>
 
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_32_1.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_36_1.png)
 
 
 
@@ -1052,12 +1357,12 @@ sns.boxplot(data = train, x = 'gender', y = 'lineLength_median', hue = 'gender')
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f7d4a6ffd10>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fe92d0a1dd0>
 
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_33_1.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_37_1.png)
 
 
 
@@ -1068,12 +1373,12 @@ sns.scatterplot(data = train, x = 'wordCountLine_median', y = 'chId_count', hue 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f7d4a625a50>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fe93902b810>
 
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_34_1.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_38_1.png)
 
 
 ### Train test split
@@ -1091,8 +1396,89 @@ X.drop('gender', axis=1, inplace=True)
 X.drop('chId', axis=1, inplace=True)
 X.drop('mId', axis=1, inplace=True)
 X.drop('chName', axis=1, inplace=True)
-#X.drop('posCredits', axis=1, inplace=True) ## Keep ?
+X.head()
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>posCredits</th>
+      <th>releaseYear</th>
+      <th>lineLength_median</th>
+      <th>wordCountLine_median</th>
+      <th>chId_count</th>
+      <th>cleaned_dialogue_&lt;lambda&gt;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4</td>
+      <td>1999.0</td>
+      <td>34.0</td>
+      <td>7.0</td>
+      <td>94</td>
+      <td>hope let go okay gonna need learn lie like fe...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7</td>
+      <td>1999.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>31</td>
+      <td>died sleep three day ago paper tom dead  calli...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1996.0</td>
+      <td>24.5</td>
+      <td>5.0</td>
+      <td>70</td>
+      <td>asked would said room room serious foolin arou...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>1996.0</td>
+      <td>37.0</td>
+      <td>8.0</td>
+      <td>163</td>
+      <td>let follow said new jesus christ carlos brothe...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10+</td>
+      <td>1997.0</td>
+      <td>48.0</td>
+      <td>9.0</td>
+      <td>33</td>
+      <td>course uh v p security arrangement generally t...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 We will pick equal no of records for both male & female characters to avoid any kind of bias due to no of records.
 
@@ -1157,6 +1543,7 @@ X_val.head()
     <tr style="text-align: right;">
       <th></th>
       <th>posCredits</th>
+      <th>releaseYear</th>
       <th>lineLength_median</th>
       <th>wordCountLine_median</th>
       <th>chId_count</th>
@@ -1167,6 +1554,7 @@ X_val.head()
     <tr>
       <th>1236</th>
       <td>2</td>
+      <td>2001.0</td>
       <td>33.0</td>
       <td>6.0</td>
       <td>60</td>
@@ -1174,31 +1562,35 @@ X_val.head()
     </tr>
     <tr>
       <th>924</th>
-      <td>2</td>
-      <td>38.5</td>
-      <td>8.0</td>
-      <td>144</td>
-      <td>way want take cut make ya hell gonna played bi...</td>
+      <td>10+</td>
+      <td>1974.0</td>
+      <td>23.0</td>
+      <td>5.0</td>
+      <td>23</td>
+      <td>sure okay okay got boat plus owe know oh gee m...</td>
     </tr>
     <tr>
       <th>868</th>
-      <td>1</td>
+      <td>4</td>
+      <td>2001.0</td>
       <td>34.0</td>
       <td>6.0</td>
-      <td>152</td>
-      <td>bone pavel hear give name rank come pavel expe...</td>
+      <td>34</td>
+      <td>going coast alan idea alive headed need stick...</td>
     </tr>
     <tr>
       <th>363</th>
-      <td>4</td>
-      <td>34.0</td>
-      <td>6.5</td>
-      <td>32</td>
-      <td>hears everything understand understand perfect...</td>
+      <td>1</td>
+      <td>1999.0</td>
+      <td>33.0</td>
+      <td>7.0</td>
+      <td>146</td>
+      <td>poor woman carole wound could hope pacify evas...</td>
     </tr>
     <tr>
       <th>989</th>
       <td>10+</td>
+      <td>2000.0</td>
       <td>42.0</td>
       <td>8.0</td>
       <td>15</td>
@@ -1229,7 +1621,7 @@ Pipeline for numeric features
 
 
 ```python
-numeric_features = ['lineLength_median', 'wordCountLine_median', 'chId_count']
+numeric_features = ['lineLength_median', 'wordCountLine_median', 'chId_count', 'releaseYear']
 
 numeric_transformer = Pipeline(steps=[('scaler', MinMaxScaler())])
 ```
@@ -1276,7 +1668,7 @@ nb_clf = Pipeline(steps=[('preprocessor', preprocessor),
                       ('classifier', MultinomialNB())])
 
 rf_clf = Pipeline(steps=[('preprocessor', preprocessor),
-                      ('classifier', RandomForestClassifier(n_estimators=100, min_samples_leaf=10, 
+                      ('classifier', RandomForestClassifier(n_estimators=120, min_samples_leaf=10, 
                                                             max_features=0.7, n_jobs=-1, oob_score=True))])
 ```
 
@@ -1299,7 +1691,8 @@ rf_clf.fit(X_train, y_train)
                                                                        MinMaxScaler())]),
                                                       ['lineLength_median',
                                                        'wordCountLine_median',
-                                                       'chId_count']),
+                                                       'chId_count',
+                                                       'releaseYear']),
                                                      ('cat',
                                                       Pipeline(steps=[('onehot',
                                                                        OneHotEncoder(handle_unknown='ignore'))]),
@@ -1312,7 +1705,8 @@ rf_clf.fit(X_train, y_train)
                                                       ['cleaned_dialogue_<lambda>'])])),
                     ('classifier',
                      RandomForestClassifier(max_features=0.7, min_samples_leaf=10,
-                                            n_jobs=-1, oob_score=True))])
+                                            n_estimators=120, n_jobs=-1,
+                                            oob_score=True))])
 
 
 
@@ -1346,31 +1740,31 @@ results("Naive Bayes" , nb_clf)
 results("Random Forest" , rf_clf)
 ```
 
-    SVC score: 0.734
+    SVC score: 0.721
                   precision    recall  f1-score   support
     
-               0       0.75      0.71      0.73       190
-               1       0.72      0.76      0.74       190
-    
-        accuracy                           0.73       380
-       macro avg       0.73      0.73      0.73       380
-    weighted avg       0.73      0.73      0.73       380
-    
-    Logistic Regression score: 0.718
-                  precision    recall  f1-score   support
-    
-               0       0.72      0.71      0.71       190
-               1       0.71      0.73      0.72       190
+               0       0.74      0.69      0.71       190
+               1       0.71      0.75      0.73       190
     
         accuracy                           0.72       380
        macro avg       0.72      0.72      0.72       380
     weighted avg       0.72      0.72      0.72       380
     
-    Naive Bayes score: 0.713
+    Logistic Regression score: 0.718
                   precision    recall  f1-score   support
     
-               0       0.70      0.75      0.72       190
-               1       0.73      0.67      0.70       190
+               0       0.74      0.68      0.71       190
+               1       0.70      0.76      0.73       190
+    
+        accuracy                           0.72       380
+       macro avg       0.72      0.72      0.72       380
+    weighted avg       0.72      0.72      0.72       380
+    
+    Naive Bayes score: 0.708
+                  precision    recall  f1-score   support
+    
+               0       0.70      0.73      0.71       190
+               1       0.72      0.68      0.70       190
     
         accuracy                           0.71       380
        macro avg       0.71      0.71      0.71       380
@@ -1379,8 +1773,8 @@ results("Random Forest" , rf_clf)
     Random Forest score: 0.705
                   precision    recall  f1-score   support
     
-               0       0.70      0.72      0.71       190
-               1       0.71      0.69      0.70       190
+               0       0.71      0.69      0.70       190
+               1       0.70      0.72      0.71       190
     
         accuracy                           0.71       380
        macro avg       0.71      0.71      0.71       380
@@ -1389,19 +1783,19 @@ results("Random Forest" , rf_clf)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_55_1.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_1.png)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_55_2.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_2.png)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_55_3.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_3.png)
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_55_4.png)
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
 
 
 We are getting accuracy in the range of 70-75% for most of the models, which is pretty good. 
@@ -1431,439 +1825,258 @@ numeric_features_list.extend(vect_columns)
 
 
 ```python
-eli5.explain_weights(log_clf.named_steps['classifier'], top=30, feature_names=numeric_features_list)
+lr_weights = eli5.explain_weights_df(log_clf.named_steps['classifier'], top=30, feature_names=numeric_features_list)
+lr_weights.head(15)
 ```
 
 
 
 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-    <style>
-    table.eli5-weights tr:hover {
-        filter: brightness(85%);
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <p style="margin-bottom: 0.5em; margin-top: 0em">
-            <b>
-
-        y=1
-
-</b>
-
-top features
-        </p>
-
-    <table class="eli5-weights"
-           style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto; margin-bottom: 2em;">
-        <thead>
-        <tr style="border: none;">
-
-                <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;" title="Feature weights. Note that weights do not account for feature value scales, so if feature values have different scales, features with highest weights might not be the most important.">
-                    Weight<sup>?</sup>
-                </th>
-
-            <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
-
-        </tr>
-        </thead>
-        <tbody>
-
-            <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +2.845
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        oh
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 86.12%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.688
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        love
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 88.73%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.254
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        want
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 89.48%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.137
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        god
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 89.69%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.105
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        really
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 89.79%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.089
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        said
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 90.20%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.027
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        darling
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 90.25%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.020
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        child
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 90.26%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.018
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        never
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 90.35%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +1.005
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        going
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 91.25%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +0.873
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        bill
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 91.51%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +0.837
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        leave
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 91.53%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +0.833
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        charles
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 91.54%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +0.833
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        father
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(120, 100.00%, 91.63%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        +0.820
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        daddy
-    </td>
-
-</tr>
-
-
-            <tr style="background-color: hsl(120, 100.00%, 91.63%); border: none;">
-                <td colspan="2" style="padding: 0 0.5em 0 0.5em; text-align: center; border: none; white-space: nowrap;">
-                    <i>&hellip; 10866 more positive &hellip;</i>
-                </td>
-            </tr>
-
-
-
-            <tr style="background-color: hsl(0, 100.00%, 91.60%); border: none;">
-                <td colspan="2" style="padding: 0 0.5em 0 0.5em; text-align: center; border: none; white-space: nowrap;">
-                    <i>&hellip; 14480 more negative &hellip;</i>
-                </td>
-            </tr>
-
-
-            <tr style="background-color: hsl(0, 100.00%, 91.60%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -0.824
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        em
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 91.06%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -0.901
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        look
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 90.85%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -0.932
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        right
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 90.65%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -0.960
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        one
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 90.47%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -0.987
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        guy
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 90.24%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.020
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        dude
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 90.21%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.026
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        hell
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 89.79%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.090
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        sir
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 89.13%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.192
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        hey
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 88.96%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.218
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        listen
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 88.40%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.306
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        fuckin
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 87.74%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.414
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        got
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 87.10%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.521
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        gotta
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 86.97%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -1.542
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        yeah
-    </td>
-
-</tr>
-
-            <tr style="background-color: hsl(0, 100.00%, 83.07%); border: none;">
-    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-        -2.243
-    </td>
-    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-        man
-    </td>
-
-</tr>
-
-
-        </tbody>
-    </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>target</th>
+      <th>feature</th>
+      <th>weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>oh</td>
+      <td>2.914220</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>really</td>
+      <td>1.598428</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>love</td>
+      <td>1.582584</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>hi</td>
+      <td>1.173297</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>said</td>
+      <td>1.161967</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>want</td>
+      <td>1.053116</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1</td>
+      <td>like</td>
+      <td>1.020965</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>darling</td>
+      <td>0.992410</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>never</td>
+      <td>0.987203</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>child</td>
+      <td>0.975300</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>please</td>
+      <td>0.970647</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1</td>
+      <td>god</td>
+      <td>0.941234</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>1</td>
+      <td>know</td>
+      <td>0.913415</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>1</td>
+      <td>honey</td>
+      <td>0.903731</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>1</td>
+      <td>school</td>
+      <td>0.897518</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+lr_weights.tail(15)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>target</th>
+      <th>feature</th>
+      <th>weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>1</td>
+      <td>peter</td>
+      <td>0.878517</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>1</td>
+      <td>son</td>
+      <td>-0.876330</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>1</td>
+      <td>good</td>
+      <td>-0.897884</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>1</td>
+      <td>right</td>
+      <td>-0.899643</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>1</td>
+      <td>chId_count</td>
+      <td>-0.916359</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>1</td>
+      <td>fuck</td>
+      <td>-0.996575</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>1</td>
+      <td>fuckin</td>
+      <td>-1.049543</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>1</td>
+      <td>yeah</td>
+      <td>-1.091158</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>1</td>
+      <td>hell</td>
+      <td>-1.137874</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>1</td>
+      <td>got</td>
+      <td>-1.162604</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>1</td>
+      <td>shit</td>
+      <td>-1.162634</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>1</td>
+      <td>sir</td>
+      <td>-1.201654</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>1</td>
+      <td>gotta</td>
+      <td>-1.246364</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>1</td>
+      <td>hey</td>
+      <td>-1.549047</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>1</td>
+      <td>man</td>
+      <td>-2.188670</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 
@@ -1872,6 +2085,35 @@ We see that dialogue keywords like "oh", "love", "like", "darling", "want", "hon
 #### Let's also try to visualize a single decision tree
 
 We can training a single decision tree using the Random Forest Classifier.
+
+
+```python
+m = RandomForestClassifier(n_estimators=1, min_samples_leaf=5, max_depth = 3, 
+                           oob_score=True, random_state = np.random.seed(123))
+dt_clf = Pipeline(steps=[('preprocessor', preprocessor),
+                         ('classifier', m)])
+
+dt_clf.fit(X_train, y_train)
+results("Decision Tree Classifier", dt_clf)
+```
+
+    Decision Tree Classifier score: 0.526
+                  precision    recall  f1-score   support
+    
+               0       0.54      0.37      0.44       190
+               1       0.52      0.68      0.59       190
+    
+        accuracy                           0.53       380
+       macro avg       0.53      0.53      0.51       380
+    weighted avg       0.53      0.53      0.51       380
+    
+
+
+
+![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_69_1.png)
+
+
+While a single decision is a poor classifier with accuracy barely more than 50%, we see that bagging enough of such weak classifiers to form a Random Forest model helps us improve the model performance drastically! Let's look at how the splits are made for a single decision tree.
 
 
 ```python
@@ -1885,40 +2127,11 @@ def draw_tree(t, df, size=10, ratio=0.6, precision=0):
     IPython.display.display(graphviz.Source(re.sub('Tree {',
        f'Tree {{ size={size}; ratio={ratio}', s)))
 
-m = RandomForestClassifier(n_estimators=1, min_samples_leaf=5, max_depth = 3, 
-                           oob_score=True, random_state = np.random.seed(12))
-dt_clf = Pipeline(steps=[('preprocessor', preprocessor),
-                         ('classifier', m)])
-
-dt_clf.fit(X_train, y_train)
-results("Decision Tree Classifier", dt_clf)
-```
-
-    Decision Tree Classifier score: 0.518
-                  precision    recall  f1-score   support
-    
-               0       0.61      0.10      0.17       190
-               1       0.51      0.94      0.66       190
-    
-        accuracy                           0.52       380
-       macro avg       0.56      0.52      0.42       380
-    weighted avg       0.56      0.52      0.42       380
-    
-
-
-
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_64_1.png)
-
-
-While a single decision is a poor classifier with accuracy barely more than 50%, we see that bagging enough of such weak classifiers to form a Random Forest model helps us improve the model performance drastically! Let's look at how the splits are made for a single decision tree.
-
-
-```python
 draw_tree(m.estimators_[0], X_train, precision=2)
 ```
 
 
-![svg](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_66_0.svg)
+![svg](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
 
 
 Here the blue colored nodes indicate their majority class is "female" while the orange colored nodes have a majority of "male" labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens.
@@ -1927,456 +2140,219 @@ Here the blue colored nodes indicate their majority class is "female" while the 
 
 
 ```python
-eli5.explain_weights(rf_clf.named_steps['classifier'], top=30, feature_names=numeric_features_list)
+eli5.explain_weights_df(rf_clf.named_steps['classifier'], top=30, feature_names=numeric_features_list)
 ```
 
 
 
 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-    <style>
-    table.eli5-weights tr:hover {
-        filter: brightness(85%);
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <table class="eli5-weights eli5-feature-importances" style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto;">
-    <thead>
-    <tr style="border: none;">
-        <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;">Weight</th>
-        <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>feature</th>
+      <th>weight</th>
+      <th>std</th>
     </tr>
-    </thead>
-    <tbody>
-
-        <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0711
-
-                    &plusmn; 0.0656
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                oh
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 83.66%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0532
-
-                    &plusmn; 0.0602
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                man
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 89.89%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0268
-
-                    &plusmn; 0.0625
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                love
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 91.54%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0208
-
-                    &plusmn; 0.0465
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                got
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 91.74%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0201
-
-                    &plusmn; 0.0379
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                lineLength_median
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.20%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0152
-
-                    &plusmn; 0.0371
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                yeah
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.22%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0151
-
-                    &plusmn; 0.0334
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                want
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.30%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0149
-
-                    &plusmn; 0.0427
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                hey
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.51%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0142
-
-                    &plusmn; 0.0334
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                said
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.58%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0140
-
-                    &plusmn; 0.0363
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                listen
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 93.99%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0128
-
-                    &plusmn; 0.0406
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                gotta
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 94.64%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0108
-
-                    &plusmn; 0.0264
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                one
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 94.65%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0108
-
-                    &plusmn; 0.0271
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                think
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 94.89%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0101
-
-                    &plusmn; 0.0246
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                right
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.20%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0092
-
-                    &plusmn; 0.0289
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                good
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.21%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0092
-
-                    &plusmn; 0.0283
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                look
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.29%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0090
-
-                    &plusmn; 0.0263
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                going
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.33%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0089
-
-                    &plusmn; 0.0267
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                ever
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.44%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0086
-
-                    &plusmn; 0.0250
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                chId_count
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.56%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0083
-
-                    &plusmn; 0.0204
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                know
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.66%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0080
-
-                    &plusmn; 0.0220
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                say
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.69%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0079
-
-                    &plusmn; 0.0252
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                tell
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.74%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0078
-
-                    &plusmn; 0.0216
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                go
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.89%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0074
-
-                    &plusmn; 0.0323
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                hell
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.91%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0074
-
-                    &plusmn; 0.0293
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                running
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 95.92%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0073
-
-                    &plusmn; 0.0298
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                child
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 96.00%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0071
-
-                    &plusmn; 0.0262
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                even
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 96.04%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0070
-
-                    &plusmn; 0.0217
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                like
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 96.14%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0068
-
-                    &plusmn; 0.0222
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                may
-            </td>
-        </tr>
-
-        <tr style="background-color: hsl(120, 100.00%, 96.25%); border: none;">
-            <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
-                0.0065
-
-                    &plusmn; 0.0216
-
-            </td>
-            <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
-                yes
-            </td>
-        </tr>
-
-
-
-            <tr style="background-color: hsl(120, 100.00%, 96.25%); border: none;">
-                <td colspan="2" style="padding: 0 0.5em 0 0.5em; text-align: center; border: none; white-space: nowrap;">
-                    <i>&hellip; 25345 more &hellip;</i>
-                </td>
-            </tr>
-
-
-    </tbody>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>oh</td>
+      <td>0.077328</td>
+      <td>0.027570</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>man</td>
+      <td>0.040615</td>
+      <td>0.030255</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>love</td>
+      <td>0.022664</td>
+      <td>0.026011</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>shit</td>
+      <td>0.019557</td>
+      <td>0.027031</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>said</td>
+      <td>0.017135</td>
+      <td>0.018359</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>lineLength_median</td>
+      <td>0.015757</td>
+      <td>0.017705</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>got</td>
+      <td>0.013712</td>
+      <td>0.018381</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>really</td>
+      <td>0.013227</td>
+      <td>0.018366</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>hey</td>
+      <td>0.012435</td>
+      <td>0.019035</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>good</td>
+      <td>0.012253</td>
+      <td>0.017000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>look</td>
+      <td>0.011174</td>
+      <td>0.016425</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>right</td>
+      <td>0.009775</td>
+      <td>0.012608</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>sir</td>
+      <td>0.009673</td>
+      <td>0.018090</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>think</td>
+      <td>0.009661</td>
+      <td>0.014078</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>know</td>
+      <td>0.009660</td>
+      <td>0.012629</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>em</td>
+      <td>0.008794</td>
+      <td>0.019125</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>like</td>
+      <td>0.008730</td>
+      <td>0.011206</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>understand</td>
+      <td>0.008263</td>
+      <td>0.013995</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>want</td>
+      <td>0.008112</td>
+      <td>0.012310</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>yeah</td>
+      <td>0.007471</td>
+      <td>0.014095</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>get</td>
+      <td>0.007464</td>
+      <td>0.010990</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>would</td>
+      <td>0.007399</td>
+      <td>0.010665</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>chId_count</td>
+      <td>0.007074</td>
+      <td>0.010570</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>come</td>
+      <td>0.006845</td>
+      <td>0.010507</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>god</td>
+      <td>0.006782</td>
+      <td>0.011838</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>releaseYear</td>
+      <td>0.006504</td>
+      <td>0.009230</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>hi</td>
+      <td>0.006305</td>
+      <td>0.016955</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>one</td>
+      <td>0.006265</td>
+      <td>0.009646</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>gotta</td>
+      <td>0.006075</td>
+      <td>0.014320</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>child</td>
+      <td>0.005858</td>
+      <td>0.013265</td>
+    </tr>
+  </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
