@@ -1895,7 +1895,7 @@ lr_weights.head(15)
 
 
 ```python
-lr_weights.tail(15)
+lr_weights.tail(14)
 ```
 
 
@@ -1925,12 +1925,6 @@ lr_weights.tail(15)
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>15</th>
-      <td>1</td>
-      <td>peter</td>
-      <td>0.878517</td>
-    </tr>
     <tr>
       <th>16</th>
       <td>1</td>
@@ -2021,7 +2015,7 @@ lr_weights.tail(15)
 
 
 
-We see that dialogue keywords like "oh", "love", "like", "darling", "want", "honey" are strong indicators that the character is a female, while keywords like "sir", "man", "hell", "fuckin", "gotta" & "yeah" are usually found in the dialogues of male characters!
+We see that dialogue keywords like "oh", "love", "like", "darling", "want", "honey" are strong indicators that the character is a female, while keywords like "son", "sir", "man", "hell", "gotta", "yeah" & most cuss words are usually found in the dialogues of male characters!
 
 #### Let's also try to visualize a single decision tree
 
