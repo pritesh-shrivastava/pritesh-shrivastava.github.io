@@ -1262,7 +1262,7 @@ sns.boxplot(data = train, x = 'gender', y = 'chId_count', hue = 'gender')
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_35_1.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_35_1.png)
 
 
 
@@ -1278,7 +1278,7 @@ sns.boxplot(data = train, x = 'gender', y = 'wordCountLine_median', hue = 'gende
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_36_1.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_36_1.png)
 
 
 
@@ -1294,7 +1294,7 @@ sns.boxplot(data = train, x = 'gender', y = 'lineLength_median', hue = 'gender')
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_37_1.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_37_1.png)
 
 
 
@@ -1310,7 +1310,7 @@ sns.scatterplot(data = train, x = 'wordCountLine_median', y = 'chId_count', hue 
 
 
 
-![png](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_38_1.png)
+![png](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_38_1.png)
 
 
 ### Train test split
@@ -2050,12 +2050,13 @@ While a single decision is a poor classifier with accuracy barely more than 50%,
 
 ```python
 draw_tree(m.estimators_[0], X_train, precision=2)
-##  Draws a representation of a decition tree in IPython from fastai v0.7
-## Check Jupyter notebook link on Kaggle below for description
+## Draws a representation of a decition tree in IPython. Source : fastai v0.7
+## Have removed function definition here due to a Jekyll build error related to Liquid objects.
+## Check the Jupyter notebook uploaded on Kaggle below for the function definition.
 ```
 
 
-![svg](gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
+![svg](assets/files/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
 
 
 Here the blue colored nodes indicate their majority class is "female" while the orange colored nodes have a majority of "male" labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens.
