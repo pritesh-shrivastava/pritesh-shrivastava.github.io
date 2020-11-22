@@ -2137,7 +2137,7 @@ def draw_tree(t, df, size=10, ratio=0.6, precision=0):
     s=export_graphviz(t, out_file=None, feature_names=numeric_features_list, filled=True,
                       special_characters=True, rotate=True, precision=precision, 
                       proportion=True, class_names = ["male", "female"], impurity = False)
-    IPython.display.display(graphviz.Source(re.sub('Tree {',
+    IPython.display.display(graphviz.Source(re.sub('Tree {}',
        f'Tree {{ size={size}; ratio={ratio}}}', s)))
 
 draw_tree(m.estimators_[0], X_train, precision=2)
