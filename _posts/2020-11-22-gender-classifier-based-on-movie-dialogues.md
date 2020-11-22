@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "Analyzing gender bias in movie dialogues"
-excerpt: "Building a gender classifier based on dialogues of characters in Hollywood movies"
+excerpt: "Building a gender classifier model based on the dialogues of characters in Hollywood movies"
 date: 2020-11-22
 tags:
   - python
@@ -11,7 +11,7 @@ comments: true
 ---
 
 
-In this post, I've tried to analyze gender bias in Hollywood movies using the character dialogues & some movie metadata. The gender bias can be established if we can predict the gender of a Hollywood movie character based on his / her dialogues in the movie. The [dataset](https://www.kaggle.com/Cornell-University/movie-dialog-corpus) was released by [Cornell University](http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). The data pre-processing, EDA & modeling are all done in Python3 in a Jupyter notebook environment, rendered finally into a Makrdown for this blog.
+In this post, I've tried to analyze gender bias in Hollywood movies using the character dialogues & some movie metadata. The gender bias can be established if we can predict the gender of a Hollywood movie character based on his / her dialogues in the movie. The [dataset](https://www.kaggle.com/Cornell-University/movie-dialog-corpus) was released by [Cornell University](http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). The data pre-processing, EDA & modeling are all done in Python3 in a Jupyter notebook environment, rendered finally into a Markdown for this blog.
 
 ### Import necessary libraries
 
@@ -1737,25 +1737,25 @@ results("Random Forest" , rf_clf)
 ![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
 
 
-We see that Linear SVC performs the best classification with a accuracy score of ~79% !
-Out of the 190 male characters in the validation dataset, our model classified 155 of them correctly as males, 
-and the remaining 35 incorrectly as females. Similarly, out of 190 female characters in the validation dataset,
-144 were classified correctly & 46 classified incorrectly.   
-Logistic Regression & Naive Bayes classifiers are close at 77 & 76% accuracies respectively.
+We see that Linear SVC performs the best classification with an accuracy & F1 score of ~79% !!
+
+From the confusion matrix, we can see that out of the 190 male characters in the validation dataset, SVC model classified 155 of them correctly as males, and the remaining 35 incorrectly as females. Similarly, out of 190 female characters in the validation dataset, 144 were classified correctly & 46 classified incorrectly. 
+
+Logistic Regression & Naive Bayes classifiers are close at 77% & 76% accuracies respectively.
 These results are not close to state of the art, but are still pretty good.
 
-Some possible ways to improve this performance could be:
+Some possible ways to further improve this performance could be:
 - using bi-grams or tri-grams for dialogue tokens
 - Adding features related to sentiments extracted from dialogues
 - Adding a feature that measures the level of objectivity or subjectivity of a dialogue
+- hyper-parameter tuning of our model parameters
+- trying out XGBoost or neural network models
 
-Still, our simple classifier does a good enough job to understand that the gender bias in the characters of Hollywood movies which our models are capturing fairly well.
-
-Let's explore what features contribute the most to our classifiers through some model explainability techniques.
+Still, our simple models do a good enough job to capture the gender bias in the characters of Hollywood movies. Let's explore what features contribute the most to our classifiers performance through some model explainability techniques.
 
 ## Feature importance
 
-Creating a list of all features including numeric & vectorised features
+Creating a list of all features including numeric, categorical & vectorised features.
 
 
 ```python
@@ -2076,7 +2076,7 @@ draw_tree(m.estimators_[0], X_train, precision=2)
 ![svg](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
 
 
-Here the blue colored nodes indicate their majority class is "female" while the orange colored nodes have a majority of "male" labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens. For eg., in the above tree, if the tf-idf frequency of keywords `think` is > 0.1 & `kid` is > 0.03, the samples are classified as `female`. 
+Here, the blue coloured nodes indicate their majority class is `female` while the orange colored nodes have a majority of `male` labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens. For eg., in the above tree, if the tf-idf frequency of keywords `think` is > 0.1 & `kid` is > 0.03, the samples are classified as `female`. 
 
 #### Feature importance for the Random Forest model
 
