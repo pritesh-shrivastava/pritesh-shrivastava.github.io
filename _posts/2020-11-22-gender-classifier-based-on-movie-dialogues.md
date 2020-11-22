@@ -11,7 +11,7 @@ comments: true
 ---
 
 
-In this notebook, we will try to predict the gender of a Hollywood movie character based in his / her dialogues in the movie. The [dataset](https://www.kaggle.com/Cornell-University/movie-dialog-corpus) was released by [Cornell University](http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). This classifier will help us understand if there is some kind of gender bias between male and female characters in Hollywood movies.
+In this post, I've tried to analyze gender bias in Hollywood movies using the character dialogues & some movie metadata. The gender bias can be established if we can predict the gender of a Hollywood movie character based on his / her dialogues in the movie. The [dataset](https://www.kaggle.com/Cornell-University/movie-dialog-corpus) was released by [Cornell University](http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). The data pre-processing, EDA & modeling are all done in Python3 in a Jupyter notebook environment, rendered finally into a Makrdown for this blog.
 
 ### Import necessary libraries
 
