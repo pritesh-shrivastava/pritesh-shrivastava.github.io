@@ -2130,8 +2130,9 @@ While a single decision is a poor classifier with accuracy barely more than 50%,
 
 
 ```python
-##  Draws a representation of a decition tree in IPython from fastai v0.7
 draw_tree(m.estimators_[0], X_train, precision=2)
+##  Draws a representation of a decition tree in IPython from fastai v0.7
+## Check Jupyter notebook link on Kaggle below for description
 ```
 
 
