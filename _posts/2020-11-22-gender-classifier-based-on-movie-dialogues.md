@@ -2015,7 +2015,7 @@ lr_weights.tail(14)
 
 
 
-We see that dialogue keywords like "oh", "love", "like", "darling", "want", "honey" are strong indicators that the character is a female, while keywords like "son", "sir", "man", "hell", "gotta", "yeah" & most cuss words are usually found in the dialogues of male characters!
+We see that dialogue keywords like `oh`, `love`, `like`, `darling`, `want`, `honey` are strong indicators that the character is a female, while keywords like `son`, `sir`, `man`, `hell`, `gotta`, `yeah` & most cuss words are usually found in the dialogues of male characters of the given Hollywood movies!
 
 #### Let's also try to visualize a single decision tree
 
@@ -2072,7 +2072,7 @@ draw_tree(m.estimators_[0], X_train, precision=2)
 ![svg](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_71_0.svg)
 
 
-Here the blue colored nodes indicate their majority class is "female" while the orange colored nodes have a majority of "male" labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens.
+Here the blue colored nodes indicate their majority class is "female" while the orange colored nodes have a majority of "male" labels. The decision tree starts with a mixed sample, but the leaves of the tree are biased towards one class or the other. Most splits seem to be happening using dialogue tokens. For eg., in the above tree, if the tf-idf frequency of keywords `think` is > 0.1 & `kid` is > 0.03, the samples are classified as `female`. 
 
 #### Feature importance for the Random Forest model
 
