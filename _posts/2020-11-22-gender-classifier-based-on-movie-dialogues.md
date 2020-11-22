@@ -1733,13 +1733,19 @@ results("Random Forest" , rf_clf)
 ![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_59_4.png)
 
 
-We are getting accuracy in the range of 70-75% for most of the models, which is pretty good. 
+We see that Linear SVC performs the best classification with a accuracy score of ~79% !
+Out of the 190 male characters in the validation dataset, our model classified 155 of them correctly as males, 
+and the remaining 35 incorrectly as females. Similarly, out of 190 female characters in the validation dataset,
+144 were classified correctly & 46 classified incorrectly.   
+Logistic Regression & Naive Bayes classifiers are close at 77 & 76% accuracies respectively.
+These results are not close to state of the art, but are still pretty good.
+
 Some possible ways to improve this performance could be:
 - using bi-grams or tri-grams for dialogue tokens
-- Trying out feed forward neural networks, LSTM or CNN
-- additional feature engineering related to context of dialogues in the movie
+- Adding features related to sentiments extracted from dialogues
+- Adding a feature that measures the level of objectivity or subjectivity of a dialogue
 
-Still, our current classifier performance is good enough to understand that there is indeed a gender bias in the characters of Hollywood movies which our models are capturing fairly well.
+Still, our simple classifier does a good enough job to understand that the gender bias in the characters of Hollywood movies which our models are capturing fairly well.
 
 Let's explore what features contribute the most to our classifiers through some model explainability techniques.
 
