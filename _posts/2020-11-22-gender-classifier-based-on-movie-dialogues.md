@@ -2068,7 +2068,7 @@ def draw_tree(t, df, size=10, ratio=0.6, precision=0):
                       special_characters=True, rotate=True, precision=precision, 
                       proportion=True, class_names = ["male", "female"], impurity = False)
     IPython.display.display(graphviz.Source(re.sub('Tree {',
-       f'Tree {{ size={size}; ratio={ratio}}}', s)))
+       f'Tree size={size}; ratio={ratio}', s)))
 '''
 
 draw_tree(m.estimators_[0], X_train, precision=2)
