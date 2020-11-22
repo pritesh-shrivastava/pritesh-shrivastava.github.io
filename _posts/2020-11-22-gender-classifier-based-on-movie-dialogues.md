@@ -70,8 +70,8 @@ pd.set_option('display.max_rows', 100)
 ```python
 lines_df = pd.read_csv('../input/movie_lines.tsv', sep='\t', error_bad_lines=False,
                        warn_bad_lines=False, header=None)
-characters_df = pd.read_csv('../input/movie_characters_metadata.tsv', sep='\t', warn_bad_lines=False,
-                            error_bad_lines=False, header=None)
+characters_df = pd.read_csv('../input/movie_characters_metadata.tsv', sep='\t', 
+                            warn_bad_lines=False, error_bad_lines=False, header=None)
 
 characters_df.head()
 ```
@@ -277,7 +277,7 @@ characters_df.gender.value_counts()
 
 
 
-We need to clean this column. Let's also remove the characters were gender information is not available.
+We need to clean this column. Let's also remove the characters where gender information is not available.
 We'll assign a label of 0 to male characters & 1 to female characters.
 
 
@@ -950,9 +950,9 @@ df.head()
 
 Next, let's convert the dialogues into clean tokens 
 <ol>
-<li>Remove Stopwords : because they occur very often, but serve no meaning. e.g. : is,am,are,the.</li>
+<li>Remove Stopwords : because they occur very often, but serve no meaning. For eg. : is,am,are,the.</li>
 <li>Turn all word to smaller cases : I, i -> i</li>
-<li>walk,walks -> walk or geographical,geographic -> geographic</li>  #Lemmatization
+<li>Lemmatization: convert words to their root form. For eg., walk,walks -> walk or geographical,geographic -> geographic</li>
 </ol>
 
 
@@ -1265,6 +1265,7 @@ sns.boxplot(data = train, x = 'gender', y = 'chId_count', hue = 'gender')
 ![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_35_1.png)
 
 
+The `chId_count` here refers to the no of lines given to the character in the movie. While the median value seems to be roughly similar for both males & females, the upper bound seems to be higher for males.
 
 ```python
 sns.boxplot(data = train, x = 'gender', y = 'wordCountLine_median', hue = 'gender')
@@ -1281,6 +1282,7 @@ sns.boxplot(data = train, x = 'gender', y = 'wordCountLine_median', hue = 'gende
 ![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_36_1.png)
 
 
+The count of words per dialogue is higher for male characters than that for female characters!
 
 ```python
 sns.boxplot(data = train, x = 'gender', y = 'lineLength_median', hue = 'gender')
@@ -1297,6 +1299,7 @@ sns.boxplot(data = train, x = 'gender', y = 'lineLength_median', hue = 'gender')
 ![png](/assets/images/gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_37_1.png)
 
 
+The median length of a dialogue also seems to be higher for males. 
 
 ```python
 sns.scatterplot(data = train, x = 'wordCountLine_median', y = 'chId_count', hue = 'gender', alpha = 0.5) 
@@ -1312,6 +1315,7 @@ sns.scatterplot(data = train, x = 'wordCountLine_median', y = 'chId_count', hue 
 
 ![png](/assets/images//gender-classifier-based-on-movie-dialogues_files/gender-classifier-based-on-movie-dialogues_38_1.png)
 
+Again, in the scatter plot, we see female characters, ie yellow points, generally closer to the origin, as they have smaller dialogues & lesser dialogues per movie, while male characters denoted by blue dots are more outward from the origin.
 
 ### Train test split
 
@@ -2294,7 +2298,7 @@ eli5.explain_weights_df(rf_clf.named_steps['classifier'], top=30, feature_names=
 
 
 
-We see that the median length of a dialogue, total no of lines (`chId_count`) & position in the post credits in a movie are important features along with the tokens extracted from the character's dialogues for the Random Forest model!
+We see that the median length of a dialogue, total no of lines (`chId_count`) & movie release year are important features along with the tokens extracted from the character's dialogues for the Random Forest model!
 
 
-The complete Jupyter notebook is available on Kaggle [here](https://www.kaggle.com/priteshshrivastava/gender-classifier-based-on-movie-dialogues)
+If you would like to play around with the code, the complete Jupyter notebook is available [here](https://www.kaggle.com/priteshshrivastava/gender-classifier-based-on-movie-dialogues) on Kaggle.
