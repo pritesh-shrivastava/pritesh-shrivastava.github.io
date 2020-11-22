@@ -27,16 +27,16 @@ bundle exec jekyll serve --future
 
 #### Blog post ideas
 - Kaggle competitions
-- Add notes from Evernote - Professional
 - Add book reviews & MOOC reviews
-- Prog Lang course
+- Prog Lang course - Parts B & C
 - More Haskell - Monoid, purity
 - HtDP exercise on dictionary - Ch 2 Ex199-204 + Word combinations
 - College / branch vs career
 - Insertion sort from Racket code in HtDP - helper functions that recur
 - Classification & k-means clustering of prog lang text - Kaggle Dataset
 - Image processing (ala CS50 assignment) in R / Julia
-- Gender classification based on movie dialogues from Cornell dataset on Kaggle (2 part post), also have research paper to back up
+
+
 
 #### Promotion
 - Cross publish articles to Medium / HN
@@ -46,6 +46,4 @@ bundle exec jekyll serve --future
     Solutions - 
     [1] https://gist.github.com/hunleyd/95d2081d339bddd45dd4189275892a13
     [2] https://github.com/oxinabox/oxinabox.github.io/blob/master/rssfeed_julia.xml#L13
-    
-- 
 
