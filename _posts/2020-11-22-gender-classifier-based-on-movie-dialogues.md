@@ -984,7 +984,7 @@ def clean_dialogue( dialogue ):
     return( " ".join( meaningful_words ))
 
 df['cleaned_dialogue'] = df['dialogue'].apply(clean_dialogue)
-df[['cleaned_dialogue','dialogue']].head()
+df[['dialogue','cleaned_dialogue']].sample(5)
 ```
 
 
@@ -1008,35 +1008,35 @@ df[['cleaned_dialogue','dialogue']].head()
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>cleaned_dialogue</th>
       <th>dialogue</th>
+      <th>cleaned_dialogue</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td></td>
-      <td>They do not!</td>
+      <th>14684</th>
+      <td>Thank you.</td>
+      <td>thank</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>hope</td>
-      <td>I hope so.</td>
+      <th>58592</th>
+      <td>Hi tough guy.  I guess it worked huh?</td>
+      <td>hi tough guy guess worked huh</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>let go</td>
-      <td>Let's go.</td>
+      <th>209279</th>
+      <td>I've decided not to open a practice here  I wa...</td>
+      <td>decided open practice want set research clinic...</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>okay gonna need learn lie</td>
-      <td>Okay -- you're gonna need to learn how to lie.</td>
+      <th>95420</th>
+      <td>Am I suppose to be this sore?</td>
+      <td>suppose sore</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>like fear wearing pastel</td>
-      <td>Like my fear of wearing pastels?</td>
+      <th>50378</th>
+      <td>You could still always give Becker an itch. 'C...</td>
+      <td>could still always give becker itch course mig...</td>
     </tr>
   </tbody>
 </table>
@@ -1741,6 +1741,7 @@ We see that Linear SVC performs the best classification with an accuracy & F1 sc
 
 From the confusion matrix, we can see that out of the 190 male characters in the validation dataset, SVC model classified 155 of them correctly as males, and the remaining 35 incorrectly as females. Similarly, out of 190 female characters in the validation dataset, 144 were classified correctly & 46 classified incorrectly. 
 
+
 Logistic Regression & Naive Bayes classifiers are close at 77% & 76% accuracies respectively.
 These results are not close to state of the art, but are still pretty good.
 
@@ -1751,7 +1752,10 @@ Some possible ways to further improve this performance could be:
 - hyper-parameter tuning of our model parameters
 - trying out XGBoost or neural network models
 
-Still, our simple models do a good enough job to capture the gender bias in the characters of Hollywood movies. Let's explore what features contribute the most to our classifiers performance through some model explainability techniques.
+Still, our current best model can classify roughly 4 out of 5 movie characters correctly using the dialogues they speak, and some movie metadata like release year and position of character in the movie credits. We can say that our model is able to
+capture the gender bias in the characters of Hollywood movies. 
+
+Let's now explore what features contribute the most to our classifiers performance through some model explainability techniques.
 
 ## Feature importance
 
