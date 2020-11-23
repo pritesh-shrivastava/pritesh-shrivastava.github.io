@@ -1741,19 +1741,8 @@ We see that Linear SVC performs the best classification with an accuracy & F1 sc
 
 From the confusion matrix, we can see that out of the 190 male characters in the validation dataset, SVC model classified 155 of them correctly as males, and the remaining 35 incorrectly as females. Similarly, out of 190 female characters in the validation dataset, 144 were classified correctly & 46 classified incorrectly. 
 
-
 Logistic Regression & Naive Bayes classifiers are close at 77% & 76% accuracies respectively.
 These results are not close to state of the art, but are still pretty good.
-
-Some possible ways to further improve this performance could be:
-- using bi-grams or tri-grams for dialogue tokens
-- Adding features related to sentiments extracted from dialogues
-- Adding a feature that measures the level of objectivity or subjectivity of a dialogue
-- hyper-parameter tuning of our model parameters
-- trying out XGBoost or neural network models
-
-Still, our current best model can classify roughly 4 out of 5 movie characters correctly using the dialogues they speak, and some movie metadata like release year and position of character in the movie credits. We can say that our model is able to
-capture the gender bias in the characters of Hollywood movies. 
 
 Let's now explore what features contribute the most to our classifiers performance through some model explainability techniques.
 
@@ -2304,5 +2293,15 @@ eli5.explain_weights_df(rf_clf.named_steps['classifier'], top=30, feature_names=
 
 We see that the median length of a dialogue, total no of lines (`chId_count`) & movie release year are important features along with the tokens extracted from the character's dialogues for the Random Forest model!
 
+### Next Steps
+
+Some possible ways to further improve the classifier performance could be:
+- using bi-grams or tri-grams for dialogue tokens
+- Adding features related to sentiments extracted from dialogues
+- Adding a feature that measures the level of objectivity or subjectivity of a dialogue
+- hyper-parameter tuning of our model parameters
+- trying out XGBoost or neural network models
+
+Still, our current best model (Linear SVC) can classify roughly 4 out of 5 movie characters (79% accuracy) correctly using the dialogues they speak, and some movie metadata like release year and position of character in the movie credits. We can safely say that our model is able to capture the gender specific bias in the characters of Hollywood movies. 
 
 If you would like to play around with the code, the complete Jupyter notebook is available [here](https://www.kaggle.com/priteshshrivastava/gender-classifier-based-on-movie-dialogues) on Kaggle.
