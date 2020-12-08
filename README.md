@@ -40,11 +40,10 @@ bundle exec jekyll serve --future
 
 #### Promotion
 - Cross publish articles to Medium / HN
-    - Can import artices to these sites with their canonical links 
-    - Simple copy pasting content without providing canonical link can penalize SEO
+    - Can import artices to these sites with their canonical links. Simple copy pasting content without providing canonical link can penalize SEO
     - Code & markdown chunks are not rendered properly on Medium. Need text & atleast 1 image
-- Reddit / Slack / Twitter / LinkedIn
-- Publish R blogs on R-blogger : Need a separate RSS feed for posts with tag / category R!
+- Reddit / Slack / Twitter / LinkedIn / FB groups & LinkedIn groups
+- Publish R blogs on R-weekly by link or R-blogger with a separate RSS feed for posts with tag R
     https://www.r-bloggers.com/add-your-blog/
     Solutions - 
     [1] https://gist.github.com/hunleyd/95d2081d339bddd45dd4189275892a13
