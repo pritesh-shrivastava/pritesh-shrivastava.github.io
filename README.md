@@ -35,13 +35,16 @@ bundle exec jekyll serve --future
 - Insertion sort from Racket code in HtDP - helper functions that recur
 - Classification & k-means clustering of prog lang text - Kaggle Dataset
 - Image processing (ala CS50 assignment) in R / Julia
-
+- Summary of Google Analytics data for 2020 in R
+- What I learnt from blogging
 
 
 #### Promotion
 - Cross publish articles to Medium / HN
     - Can import artices to these sites with their canonical links. Simple copy pasting content without providing canonical link can penalize SEO
-    - Code & markdown chunks are not rendered properly on Medium. Need text & atleast 1 image
+    - Code & markdown chunks are not rendered properly on Medium. Need text & atleast 1 image per article
+        - Can try importing Github gists to Medium
+        - Use Python package [jupyter_to_medium](https://pypi.org/project/jupyter-to-medium/)
 - Reddit / Slack / Twitter / LinkedIn / FB groups & LinkedIn groups
 - Publish R blogs on R-weekly by link or R-blogger with a separate RSS feed for posts with tag R
     https://www.r-bloggers.com/add-your-blog/
