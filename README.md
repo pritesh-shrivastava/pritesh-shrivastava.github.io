@@ -37,6 +37,7 @@ bundle exec jekyll serve --future
 - Image processing (ala CS50 assignment) in R / Julia
 - Summary of Google Analytics data for 2020 in R
 - What I learnt from blogging
+- Matrix operation via recursion on Jupyter in Scheme
 
 
 #### Promotion

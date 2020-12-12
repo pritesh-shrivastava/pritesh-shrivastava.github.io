@@ -2,3 +2,5 @@ _site/
 .jekyll-cache/
 Gemfile
 Gemfile.lock
+*.ipynb_checkpoints
+
