@@ -38,6 +38,7 @@ bundle exec jekyll serve --future
 - Summary of Google Analytics data for 2020 in R
 - What I learnt from blogging
 - Matrix operation via recursion on Jupyter in Scheme
+- Did Ishant Sharma's stats really change - Using Tensorflow Probability, similar to # SMSes case study in Bayesian analysis e-book
 
 
 #### Promotion
@@ -46,6 +47,7 @@ bundle exec jekyll serve --future
     - Code & markdown chunks are not rendered properly on Medium. Need text & atleast 1 image per article
         - Can try importing Github gists to Medium
         - Use Python package [jupyter_to_medium](https://pypi.org/project/jupyter-to-medium/)
+    - Added to AV's publication on Medium
 - Reddit / Slack / Twitter / LinkedIn / FB groups & LinkedIn groups
 - Publish R blogs on R-weekly by link or R-blogger with a separate RSS feed for posts with tag R
     https://www.r-bloggers.com/add-your-blog/
