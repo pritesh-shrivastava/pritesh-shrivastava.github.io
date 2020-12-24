@@ -60,7 +60,7 @@ Implementation of `fold-right`:
 We can use either `fold-left` or `fold-right` for `dot-product`.
 
 
-```MIT Scheme
+```scheme
 ;; Define dot product of 2 vectors of equal length
 (define (dot-product v w)
   (fold-right + 0 (map * v w))
@@ -84,7 +84,7 @@ Calculating a dot product was really easy with a couple of higher order function
 Let's work with matrices now. We will now right a function to multiply a matrix and a vector:
 
 
-```MIT Scheme
+```scheme
 (define (matrix-*-vector m v)
   (map (lambda (m-row)(dot-product m-row v) ) 
        m)
@@ -105,7 +105,7 @@ Let's work with matrices now. We will now right a function to multiply a matrix 
 Let's look at transpose now! For this, we will need to implement a helper function, `accumulate-n`, which is similar to `fold` except that it takes as its third argument a sequence of sequences, which are all assumed to have the same number of elements. 
 
 
-```MIT Scheme
+```scheme
 ;; Defining helper functions for transpose to 
 ;; apply the operation op to combine all the first elements of the sequences,
 ;; all the second elements of the sequences, and so on, 
@@ -138,7 +138,7 @@ Let's look at transpose now! For this, we will need to implement a helper functi
 Now, let's use this transpose function to do matrix multiplication:
 
 
-```MIT Scheme
+```scheme
 ; Matrix multiplication
 (define (matrix-*-matrix m n)
   (let ((n-cols (transpose n)))
@@ -161,7 +161,7 @@ Now, let's use this transpose function to do matrix multiplication:
 We can even write recursive procedures to create some special kinds of matrices, for eg, an identity matrix. Here is a recursive procudure to create an identity matrix of length `n`:
 
 
-```MIT Scheme
+```scheme
 ;; Create an identity matrix of length n
 ; N -> [List-of [List-of N]]
 (define (identityM n)
