@@ -31,7 +31,7 @@ $$
 is represented as the sequence `((1 2 3 4) (4 5 6 6) (6 7 8 9))`. With this representation, we can use sequence operations to concisely express the basic matrix and vector operations. 
 
 We will look at the following 4 basic operations on matrices:
-- `(dot-product v w)` returns the sum $ \sum_{i} v_{i} w_{i} $  
+- `(dot-product v w)` returns the sum <img src="https://render.githubusercontent.com/render/math?math= \sum_{i} v_{i} w_{i}">
 - `(matrix-*-vector m v)` returns the vector `t` , where $t_{i} = \sum_{j} m_{ij} v_{j}$  
 - `(transpose m)` returns the matrix `n` , where $n_{ij} = m_{ji}$ 
 - `(matrix-*-matrix m n)` returns the matrix `p` , where $ p_{ij} = \sum_{k} m_{ik} n_{kj} $ 
@@ -186,7 +186,7 @@ We can even write recursive procedures to create some special kinds of matrices,
     )
 )
 
-(identitym 3)
+(identityM 3)
 ```
 
 
