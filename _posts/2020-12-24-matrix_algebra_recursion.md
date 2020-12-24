@@ -18,17 +18,32 @@ This post is inspired by a couple of [exercises](https://sarabander.github.io/si
 #### Representation & Problem Statement
 
 Suppose we represent vectors v = ( v<sub>i</sub> ) as sequences of numbers, and matrices m = ( m<sub>ij</sub> ) as sequences of vectors (the rows of the matrix). For example, the matrix
-$$ 
-\left\{
-\begin{array} \\
-1 & 2 & 3 & 4 \\
-4 & 5 & 6 & 6 \\
-6 & 7 & 8 & 9 \\
-\end{array}
-\right\}
-$$
 
-is represented as the sequence `((1 2 3 4) (4 5 6 6) (6 7 8 9))`. With this representation, we can use sequence operations to concisely express the basic matrix and vector operations. 
+<div align=center>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+</div>
+
+
+is represented as the sequence `((1 2 3 4) (5 6 7 8) (9 10 11 12))`. With this representation, we can use sequence operations to concisely express the basic matrix and vector operations. 
 
 We will look at the following 4 basic operations on matrices:
 - `(dot-product v w)` returns the sum  &sum;<sub>i</sub> = v<sub>i</sub> w<sub>i</sub>  
@@ -196,7 +211,4 @@ We can even write recursive procedures to create some special kinds of matrices,
 
 
 
-If you found these functions interesting, I'de definitely encourage to go read SICP. I wrote about why I'm reading SICP [here](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far). 
-
-**PS** : 
-Here 's a nice tutorial on using Latex in Markdown [here](https://towardsdatascience.com/write-markdown-latex-in-the-jupyter-notebook-10985edb91fd)
+If you found these functions interesting, I'de definitely encourage to go read SICP. I wrote about why I'm reading SICP [here](https://pritesh-shrivastava.github.io/blog/2020/08/30/sicp-so-far).
