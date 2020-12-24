@@ -13,11 +13,11 @@ comments: true
 ---
 
 
-This post is inspired by a couple of [exercises](https://sarabander.github.io/sicp/html/2_002e2.xhtml#Exercise-2_002e37) from the classical book, [SICP](https://sarabander.github.io/sicp/html/index.xhtml). I found them pretty interesting as they were just using recursion & some common list operations to multiply matrices !! I also wanted to try out the Jupyter notebook kernel for [MIT Scheme](https://github.com/joeltg/mit-scheme-kernel) & play with some Latex along the way.
+This post is inspired by a couple of [exercises](https://sarabander.github.io/sicp/html/2_002e2.xhtml#Exercise-2_002e37) from the classical book, [SICP](https://sarabander.github.io/sicp/html/index.xhtml). I found them pretty interesting as they were just using recursion & some common list operations to multiply matrices !! I also wanted to try out the Jupyter notebook kernel for [MIT Scheme](https://github.com/joeltg/mit-scheme-kernel).
 
 #### Representation & Problem Statement
 
-Suppose we represent vectors $ v = ( v_{i} )$ as sequences of numbers, and matrices $m = ( m_{i j} )$ as sequences of vectors (the rows of the matrix). For example, the matrix
+Suppose we represent vectors v = ( v<sub>i</sub> ) as sequences of numbers, and matrices m = ( m<sub>ij</sub> ) as sequences of vectors (the rows of the matrix). For example, the matrix
 $$ 
 \left\{
 \begin{array} \\
@@ -31,10 +31,10 @@ $$
 is represented as the sequence `((1 2 3 4) (4 5 6 6) (6 7 8 9))`. With this representation, we can use sequence operations to concisely express the basic matrix and vector operations. 
 
 We will look at the following 4 basic operations on matrices:
-- `(dot-product v w)` returns the sum <img src="https://render.githubusercontent.com/render/math?math= \sum_{i} v_{i} w_{i}">
-- `(matrix-*-vector m v)` returns the vector `t` , where $t_{i} = \sum_{j} m_{ij} v_{j}$  
-- `(transpose m)` returns the matrix `n` , where $n_{ij} = m_{ji}$ 
-- `(matrix-*-matrix m n)` returns the matrix `p` , where $ p_{ij} = \sum_{k} m_{ik} n_{kj} $ 
+- `(dot-product v w)` returns the sum  &sum;<sub>i</sub> = v<sub>i</sub> w<sub>i</sub>  
+- `(matrix-*-vector m v)` returns the vector `t` , where t<sub>i</sub> = &sum;<sub>j</sub> m<sub>ij</sub> v<sub>j</sub>  
+- `(transpose m)` returns the matrix `n` , where n<sub>ij</sub> = m<sub>ji</sub> 
+- `(matrix-*-matrix m n)` returns the matrix `p` , where p<sub>ij</sub> = &sum;<sub>k</sub> m<sub>ik</sub> n<sub>kj</sub> 
 
 Dot product of 2 vectors in this notation can be done by using 2 higher order functions, `map` and `fold`, both of which are implemented using recursion.
 
