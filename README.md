@@ -35,9 +35,7 @@ bundle exec jekyll serve --future
 - Insertion sort from Racket code in HtDP - helper functions that recur
 - Classification & k-means clustering of prog lang text - Kaggle Dataset
 - Image processing (ala CS50 assignment) in R / Julia
-- Summary of Google Analytics data for 2020 in R
-- What I learnt from blogging
-- Matrix operation via recursion on Jupyter in Scheme
+- Summary of Google Analytics data for 2020 in R - LinkedIn Post
 - Did Ishant Sharma's stats really change - Using Tensorflow Probability, similar to # SMSes case study in Bayesian analysis e-book
 
 
