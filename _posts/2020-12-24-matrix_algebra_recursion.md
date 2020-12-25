@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "Matrix algebra operations using recursion"
-excerpt: "Implementing basic matrix operations in Scheme using a Jupyter notebook"
+excerpt: "Implementing basic matrix algebra operations in Scheme using a Jupyter notebook"
 date: 2020-12-24
 tags:
   - lisp
