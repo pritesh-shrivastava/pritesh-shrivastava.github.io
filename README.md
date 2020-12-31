@@ -37,6 +37,7 @@ bundle exec jekyll serve --future
 - Image processing (ala CS50 assignment) in R / Julia
 - Summary of Google Analytics data for 2020 in R - LinkedIn Post
 - Did Ishant Sharma's stats really change - Using Tensorflow Probability, similar to # SMSes case study in Bayesian analysis e-book
+- Blog post on one of Udacity Nanodegree projects - plagiarism detection / melanoma classification (both involve using open source resources)
 
 
 #### Promotion
