@@ -38,7 +38,7 @@ bundle exec jekyll serve --future
 - Summary of Google Analytics data for 2020 in R - LinkedIn Post
 - Did Ishant Sharma's stats really change - Using Tensorflow Probability, similar to # SMSes case study in Bayesian analysis e-book
 - Blog post on one of Udacity Nanodegree projects - plagiarism detection / melanoma classification (both involve using open source resources)
-- Matrices are objects that operate on vectors -> show image transformations that happen when we multiply an image vector with various kinds of matrices (MML Wk3, similar to the Julia video from Grant Sanderson?)
+- Matrices are objects that operate on vectors -> show image transformations that happen when we multiply an image vector with various kinds of matrices (MML Wk3, similar to the Julia video from Grant Sanderson?). In Numpy / Julia notebook
 - Are data structures really important for data scientists ?
 - How I got a job at Microsoft
 
