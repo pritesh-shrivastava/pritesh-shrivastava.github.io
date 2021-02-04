@@ -2,7 +2,7 @@
 layout: post
 title: "How matrices transform space"
 excerpt: "An intuitive way to look a how matrices operate vectors. Forget the matrix multiplication formula"
-date: 2021-02-04
+date: 2021-02-10
 tags:
 comments: true
 ---
