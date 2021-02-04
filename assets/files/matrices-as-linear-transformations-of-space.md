@@ -1,12 +1,3 @@
----
-layout: post
-title: "How matrices transform space"
-excerpt: "An intuitive way to look a how matrices operate vectors. Forget the matrix multiplication formula"
-date: 2021-02-04
-tags:
-comments: true
----
-
 ```python
 import numpy as np
 %matplotlib inline
@@ -208,5 +199,6 @@ plot_linear_transformation(D)
 **PS:** If you find this concept of matrix multiplication exciting, I would urge you to check out the YouTube playlist, [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), from 3Blue1Brown. There is also a free MOOC available from the George Washington University [here](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp4+2019/about) and paid one on Coursera available [here](https://www.coursera.org/learn/linear-algebra-machine-learning) 
 
 
+```python
 
-This blog post is written on a Jupyter notebook hosted on Kaggle [here](https://www.kaggle.com/priteshshrivastava/matrices-as-linear-transformations-of-space)
+```
