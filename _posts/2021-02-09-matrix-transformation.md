@@ -1,19 +1,21 @@
 ---
 layout: post
 title: "How matrices transform space"
-excerpt: "An intuitive way to look a how matrices operate vectors. Forget the matrix multiplication formula"
-date: 2021-02-10
+excerpt: "An intuitive way to look at matrix vector multiplication"
+date: 2021-02-09
 tags:
 comments: true
 ---
 
+
+We'll use some common Python libraries to look at matrix-vector multiplication in a new light.
 ```python
 import numpy as np
 %matplotlib inline
 from matplotlib import pyplot
 ```
 
-
+We'll also need a helper script to plot gridlines in a 2-D space.
 ```python
 ## Helper script for plotting  gridlines and vectors
 ## Source : https://github.com/engineersCode/EngComp4_landlinear
@@ -29,17 +31,18 @@ urlretrieve(URL, 'plot_helper.py')
 
 
 
+Importing functions (`plot_vector`, `plot_linear_transformation`, `plot_linear_transformations`) from the helper script
 
 ```python
-## Import functions plot_vector, plot_linear_transformation, plot_linear_transformations from the helper script
 from plot_helper import *
 ```
 
 ## Matrices are objects that operate on vectors
 
+When we mulitply a matrix with an n-dimensional vector, it essentially transforms the vector in n-dimensional space!
 This wonderful video by 3 Blue 1 Brown expplains this concept through beautiful visualizations - [YouTube link](https://youtu.be/kYB8IZa5AuE)
 
-Let's start with the below example by considering a 2x2 matrix A.
+We can take a 2x2 matrix A to consider how it will transform the 2-D space.
 
 
 ```python
@@ -47,16 +50,14 @@ A = np.array([[3, 2],
               [-2, 1]])
 ```
 
-We also have our basis vectors in 2-D coordinate system as usual.
-
+Let's just start with the basis vectors, `i_hat` and `j_hat` in 2-D coordinate system, and see how matrix multiplication transforms these 2 basis vectors.
 
 ```python
 i_hat = np.array([1, 0])
 j_hat = np.array([0, 1])
 ```
 
-How A transforms i_hat ?
-
+How does the matrix A transform `i_hat` via multiplication ?
 
 ```python
 A @ i_hat
@@ -67,10 +68,9 @@ A @ i_hat
 
     array([ 3, -2])
 
+This is just the 1st column of matrix A.
 
-
-How A transforms j_hat?
-
+How does the matrix A transform `j_hat`?
 
 ```python
 A @ j_hat
@@ -81,11 +81,11 @@ A @ j_hat
 
     array([2, 1])
 
+Similary, multiplication of A with `j_hat` just gives the second column of matrix A.
 
-
- How the matrix A transforms the 2-D space?
+How the matrix A transforms the 2-D space?
  
- Here's a screenshot of the above 3B1B video that shows how we can understand this 2-D transformation by simply looking at the columns of the matrix A. 
+Here's a screenshot of the above 3B1B video that shows how we can understand this 2-D transformation by simply looking at the columns of the matrix A. 
 
 ![ss](/assets/images/matrices-as-linear-transformations-of-space_files/Screenshot_3b1b.png)
 
