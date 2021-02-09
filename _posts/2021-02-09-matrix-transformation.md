@@ -118,6 +118,7 @@ plot_linear_transformation(N)
 
 ![png](/assets/images/matrices-as-linear-transformations-of-space_files/matrices-as-linear-transformations-of-space_15_0.png)
 
+## Special matrices
 
 Now, let's look at the some special kinds of matrices. We can rotate the 2-D space by 90 degrees counter clockwise by just rotating the original basis vectors in that direction.
 ```python
@@ -205,9 +206,163 @@ plot_linear_transformation(D)
 So where can we use this concept of matrix vector multiplication other than in thinking about abstract spaces ?
 One very important application of this concept can be see in image processing applications. We can consider an image to be a collection of vectors. Let's consider grayscale images for simplicity, then a grayscale image basically is just a collection of vectors in 2-D space (location of grayscale pixels can be considered a 2-D vector). And we can multiply each pixel vector with a given matrix to transform the entire image!
 
+Let's import necessary libraries for image manipulation and downloading sample images from the web.
+```python
+from PIL import Image 
+import requests
+
+## Sample image URL
+url = 'https://images.pexels.com/photos/2850833/pexels-photo-2850833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+```
+
+Let's look at our sample image!
+```python
+im = Image.open(requests.get(url, stream=True).raw)
+plt.imshow(im)
+```
+
+
+
+
+    <matplotlib.image.AxesImage at 0x7fa0e20d8910>
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_2_1.png)
+
+
+We will convert this image to grayscale format using the Pillow library.
+```python
+im = im.convert('LA')
+im
+```
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_3_0.png)
+
+
+
+Let's first check the dimensions of our image.
+```python
+b, h = im.size
+b, h
+```
+
+
+
+
+    (1300, 1300)
+
+
+
+Now, we define a function that will multiply each pixel (2-D vector) of our image with a given matrix.
+```python
+def linear_transform(trans_mat, b_new = b, h_new = h):
+    '''
+    Effectively mulitplying each pixel vector by the transformation matrix
+    PIL uses a tuple of 1st 2 rows of the inverse matrix
+    '''
+    Tinv = np.linalg.inv(trans_mat)
+    Tinvtuple = (Tinv[0,0],Tinv[0,1], Tinv[0,2], Tinv[1,0],Tinv[1,1],Tinv[1,2])
+    return im.transform((int(b_new), int(h_new)), Image.AFFINE, Tinvtuple, resample=Image.BILINEAR) 
+```
+
+So, scaling the image to half its size can be done by simply scaling our `i_hat` and `j_hat` vectors to half their magnitudes. So our transformation matrix should look like ([0.5, 0], [0, 0.5]). However the Pillow library uses 3x3 matrices rather than a 2x2 matrix. So we can just add the third basis vector to our image without any transformation on it, ie, `k_hat`. 
+
+```python
+T = np.matrix([[1/2, 0, 0],
+               [0, 1/2, 0],
+               [0, 0, 1]])
+
+trans = linear_transform(T, b/2, h/2)
+trans
+```
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_7_0.png)
+
+
+Let's try a different scaling this time!
+
+```python
+T = np.matrix([[1/4, 0, 0],
+               [0, 1/2, 0],
+               [0, 0, 1]])
+
+trans = linear_transform(T, b/4, h/2)
+trans
+```
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_8_0.png)
+
+
+
+We can rotate our image by 45 degrees counter clockwise using the below matrix.
+
+```python
+mat_rotate = (1/ np.sqrt(2)) * \
+    np.matrix([[1, -1, 0],
+               [1, 1, 0],
+               [0, 0, np.sqrt(2)]])
+
+trans = linear_transform(mat_rotate)
+trans
+```
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_10_0.png)
+
+
+We can combine the scaling and rotation transformations together by using the product of the 2 transformation matrices!
+
 ```python
 
+T = mat_rotate @ np.matrix(
+    [[1/4, 0, 0],
+     [0, 1/4, 0], 
+     [0, 0, 1]])
+
+linear_transform(T, b/4, h/4)
 ```
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_11_0.png)
+
+
+
+
+```python
+T = np.matrix(
+    [[0, -1, 0],
+     [1, 0, 0], 
+     [0, 0, 1]]) @ np.matrix(
+    [[1, 0, -b],
+     [0, 1, h],
+     [0, 0, 1]])
+
+linear_transform(T, b, h)
+```
+
+
+
+
+![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_12_0.png)
+
+
+
+
 
 **PS:** If you find this concept of matrix multiplication exciting, I would urge you to check out the YouTube playlist, [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), from 3Blue1Brown. There is also a free MOOC available from the George Washington University [here](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp4+2019/about) and paid one on Coursera available [here](https://www.coursera.org/learn/linear-algebra-machine-learning) 
 
