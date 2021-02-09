@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How matrices transform space"
-excerpt: "An intuitive way to look at matrix vector multiplication"
+excerpt: "An intuitive way to look at matrix vector multiplication, with applications in image processing"
 date: 2021-02-09
 tags:
     - python
