@@ -201,7 +201,7 @@ plot_linear_transformation(D)
 ![png](/assets/images/matrices-as-linear-transformations-of-space_files/matrices-as-linear-transformations-of-space_24_0.png)
 
 
-## Applications in Image Processing and Computer Vision
+## Applications in Image Processing
 
 So where can we use this concept of matrix vector multiplication other than in thinking about abstract spaces ?
 One very important application of this concept can be see in image processing applications. We can consider an image to be a collection of vectors. Let's consider grayscale images for simplicity, then a grayscale image basically is just a collection of vectors in 2-D space (location of grayscale pixels can be considered a 2-D vector). And we can multiply each pixel vector with a given matrix to transform the entire image!
@@ -322,8 +322,8 @@ trans
 
 ![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_10_0.png)
 
-
-We can combine the scaling and rotation transformations together by using the product of the 2 transformation matrices!
+After rotation, some pixels move out of our Matplotlib axes frame so we end with a cropped image. 
+We can also combine the scaling and rotation transformations together by using the product of the 2 transformation matrices!
 
 ```python
 
@@ -342,30 +342,9 @@ linear_transform(T, b/4, h/4)
 
 
 
+I found this idea of matrix vector multiplication very insightful and it's a pity I never learnt matrix multiplication this was in school or college. If only my school textbooks explained what matrix multiplication actually does rather than just memorizing the formula in a mechanical fashion, I would have really enjoyed learning linear algebra!
 
-```python
-T = np.matrix(
-    [[0, -1, 0],
-     [1, 0, 0], 
-     [0, 0, 1]]) @ np.matrix(
-    [[1, 0, -b],
-     [0, 1, h],
-     [0, 0, 1]])
-
-linear_transform(T, b, h)
-```
+If you're interested to go deep into this topic, I would urge you to check out the YouTube playlist, [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), from 3Blue1Brown. There is also a free MOOC from the George Washington University [here](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp4+2019/about) and paid one on Coursera available [here](https://www.coursera.org/learn/linear-algebra-machine-learning) 
 
 
-
-
-![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_12_0.png)
-
-
-
-
-
-**PS:** If you find this concept of matrix multiplication exciting, I would urge you to check out the YouTube playlist, [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), from 3Blue1Brown. There is also a free MOOC available from the George Washington University [here](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp4+2019/about) and paid one on Coursera available [here](https://www.coursera.org/learn/linear-algebra-machine-learning) 
-
-
-
-This blog post is written on a Jupyter notebook hosted on Kaggle [here](https://www.kaggle.com/priteshshrivastava/matrices-as-linear-transformations-of-space)
+This blog post is written on Jupyter notebooks hosted on Kaggle [here](https://www.kaggle.com/priteshshrivastava/matrices-as-linear-transformations-of-space) and [here](https://www.kaggle.com/priteshshrivastava/linear-transformations-of-images-with-matrices).
