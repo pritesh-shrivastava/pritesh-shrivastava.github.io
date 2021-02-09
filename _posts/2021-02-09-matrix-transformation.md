@@ -270,24 +270,8 @@ def linear_transform(trans_mat, b_new = b, h_new = h):
     return im.transform((int(b_new), int(h_new)), Image.AFFINE, Tinvtuple, resample=Image.BILINEAR) 
 ```
 
-So, scaling the image to half its size can be done by simply scaling our `i_hat` and `j_hat` vectors to half their magnitudes. So our transformation matrix should look like ([0.5, 0], [0, 0.5]). However the Pillow library uses 3x3 matrices rather than a 2x2 matrix. So we can just add the third basis vector to our image without any transformation on it, ie, `k_hat`. 
+Now let's try scaling our image, 0.25x for X-axis and 0.5x for Y-axis. So our transformation matrix should look like ([0.25, 0], [0, 0.5]). However the Pillow library uses 3x3 matrices rather than a 2x2 matrix. So we can just add the third basis vector to our image without any transformation on it, ie, `k_hat`. 
 
-```python
-T = np.matrix([[1/2, 0, 0],
-               [0, 1/2, 0],
-               [0, 0, 1]])
-
-trans = linear_transform(T, b/2, h/2)
-trans
-```
-
-
-
-
-![png](/assets/images/linear-transformations-of-images-with-matrices_files/linear-transformations-of-images-with-matrices_7_0.png)
-
-
-Let's try a different scaling this time!
 
 ```python
 T = np.matrix([[1/4, 0, 0],
