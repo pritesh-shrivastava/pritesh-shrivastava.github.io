@@ -45,7 +45,7 @@ bundle exec jekyll serve --future
         - Can try importing Github gists to Medium
         - Use Python package [jupyter_to_medium](https://pypi.org/project/jupyter-to-medium/)
     - Added to AV's publication on Medium
-- Reddit / Slack / Twitter / LinkedIn / FB groups & LinkedIn groups
+- Reddit / Slack / Twitter / LinkedIn / DS groups on FB & LinkedIn 
 - Publish R blogs on R-weekly by link or R-blogger with a separate RSS feed for posts with tag R
     https://www.r-bloggers.com/add-your-blog/
     Solutions - 
