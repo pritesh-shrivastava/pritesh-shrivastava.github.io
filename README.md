@@ -14,17 +14,15 @@ bundle exec jekyll serve --future
 ## Next steps
 
 #### Site improvements
-- Add link to Facebook profile ?
+- Add link to Facebook, Goodreads, Soundcloud profile in left sidebar
 - Add Resume & other Project details with Git repos
 - Add Disqus activity to Google Analytics as goals or events - responses & comments
 - Connection to the site is not secure due to images ?!
 
 
 #### Blog post ideas
-- Kaggle competitions
 - Add book reviews & MOOC reviews
 - Prog Lang course - Parts B & C
-- More Haskell - Monoid, purity
 - HtDP exercise on dictionary - Ch 2 Ex199-204 + Word combinations
 - College / branch vs career
 - Insertion sort from Racket code in HtDP - helper functions that recur
@@ -32,7 +30,6 @@ bundle exec jekyll serve --future
 - Image processing (ala CS50 assignment) in R / Julia / C
 - Summary of Google Analytics data for 2020 in R - LinkedIn Post, no follow up
 - Did Ishant Sharma's stats really change - Using Tensorflow Probability, similar to # SMSes case study in Bayesian analysis e-book
-- Blog post on one of Udacity Nanodegree projects - plagiarism detection / melanoma classification (both involve using open source resources)
 - Are data structures really important for data scientists ?
 - How I got a job at Microsoft
 

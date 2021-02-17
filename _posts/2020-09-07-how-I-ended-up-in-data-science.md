@@ -3,7 +3,7 @@ layout: post
 title: "How I ended up with a data science job"
 date: 2020-09-07
 tags:
-    - data science
+    - meta
 comments: true
 ---
 

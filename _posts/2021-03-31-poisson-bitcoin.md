@@ -2,7 +2,7 @@
 layout: post
 title: "Poisson Distribution and it's application in the Bitcoin White Paper"
 excerpt: "What is the Poisson distribition and when can we use it"
-date: 2021-02-31
+date: 2021-03-31
 tags:
 comments: true
 ---

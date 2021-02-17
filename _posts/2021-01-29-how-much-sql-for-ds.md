@@ -5,6 +5,7 @@ excerpt: "Most tech firm interviews include SQL problems for DS roles"
 date: 2021-01-29
 tags:
   - interview
+  - meta
 comments: true
 ---
 

@@ -3,8 +3,7 @@ layout: post
 title: "Favourite learning resources for ML"
 date: 2020-08-31
 tags:
-    - ml
-    - data science
+    - meta
 comments: true
 ---
 
