@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "What was I studying in 2017-18"
-excerpt: "The good, the bad and the ugly of MOOCs I took as a beginner data scientist"
+title: "A lookback at what I was studying as a beginner data scientist"
+excerpt: "The good, the bad and the ugly of the courses I took 3-4 years back"
 date: 2021-02-25
 tags:
     - meta
@@ -31,6 +31,6 @@ Some forgettable courses that I wouldn't recommend!! :
 - Linked In Learning / Lynda - just a playlist of videos, fairly short duration, not much exercises or projects
 
 
-It was also around that time that I started using Kaggle properly, moved from the default Novice tier to a Contributor, strted getting involved in Discussions and some competitions as well. I also started using Github for my personal projects, try and contribute to OSS.
+It was also around that time that I started using Kaggle properly, moved from the default Novice tier to a Contributor, strted getting involved in Discussions and some competitions as well. I also started using Github for my personal projects, try and contribute to OSS. I also read a couple of interesting books such R for data science and Text Mining with R wich were really good. Naked Statistics and Developing data products in R were also good but not the kind of books I would ever go back to reread them.
 
 Overall, it was mostly introductory level stuff. I ended up spending some time on some fairly ordinary courses that I would never go back to now. But back then, they still served a purpose to keep me busy / motivated while there was not much quality content back then / the wareness was limited. Still, keep dooimg the small things. They always add up. The growth is never linear. It's more like compound interest.  
