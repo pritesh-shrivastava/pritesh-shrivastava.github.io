@@ -115,8 +115,8 @@ author:
 #      icon: "fab fa-fw fa-instagram"
 #      url: "https://instagram.com/pritesh_shri"
     - label: "Goodreads"
-      icon: "fab fa-goodreads"
-      url: "https://www.goodreads.com/user/show/23475269-pritesh-shrivastava"
+      icon: "fab fa-fw fa-goodreads"
+      url: "https://www.goodreads.com/pritesh_shrivastava"
 
 
 # Site Footer
