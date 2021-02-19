@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A lookback at what I was studying as a beginner data scientist"
-excerpt: "And why you don't need another "How to become a data scientist in 2021" listicle"
+excerpt: "And why you don't need another 'How to become a data scientist in 2021' listicle"
 date: 2021-02-19
 tags:
     - meta
