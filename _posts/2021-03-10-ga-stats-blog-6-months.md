@@ -9,3 +9,7 @@ comments: true
 ---
 
 
+JPGs or graphs embedded from GA
+
+
+I'm also planning to do some custom analytics from GA data in the future in R / Python here
