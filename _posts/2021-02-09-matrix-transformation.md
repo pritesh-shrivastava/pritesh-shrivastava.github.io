@@ -21,7 +21,7 @@ import numpy as np
 from matplotlib import pyplot
 ```
 
-We'll also need a helper script to plot gridlines in a 2-D space.
+We'll also need a helper script to plot gridlines in a 2-D space, which we can import from the Github repo of this awesome [MOOC](https://github.com/engineersCode/EngComp4_landlinear).
 ```python
 ## Source : https://github.com/engineersCode/EngComp4_landlinear
 from urllib.request import urlretrieve
@@ -329,7 +329,7 @@ linear_transform(T, b/4, h/4)
 
 I found this idea of matrix vector multiplication very insightful and it's a pity I never learnt matrix multiplication this was in school or college. If only my school textbooks explained what matrix multiplication actually does rather than just memorizing the formula in a mechanical fashion, I would have really enjoyed learning linear algebra!
 
-If you're interested to go deep into this topic, I would urge you to check out the YouTube playlist, [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), from 3Blue1Brown. There is also a free MOOC from the George Washington University [here](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp4+2019/about) and paid one on Coursera available [here](https://www.coursera.org/learn/linear-algebra-machine-learning) 
+If you're interested to go deep into this topic, I would urge you to check out the YouTube playlist, [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), from 3Blue1Brown. There is also a free MOOC from the George Washington University [here](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp4+2019/about) and paid one on Coursera available [here](https://www.coursera.org/learn/linear-algebra-machine-learning).  
 
 
 This blog post is written on Jupyter notebooks hosted on Kaggle [here](https://www.kaggle.com/priteshshrivastava/matrices-as-linear-transformations-of-space) and [here](https://www.kaggle.com/priteshshrivastava/linear-transformations-of-images-with-matrices).
