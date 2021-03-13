@@ -44,6 +44,7 @@ bundle exec jekyll serve --future
 
     Focus on heavy math courses, some practical cs courses. Ignore management, liberal arts classes. You can learn them on your own from books.
 
+- Spotify dataset - predict song popularity - Indian songs ? from Kaggle's Intro to Deep Learning course tutorials
 
 
 
