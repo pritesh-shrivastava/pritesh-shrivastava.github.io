@@ -2,7 +2,7 @@
 layout: post
 title: "Is Data Structures & Algorithms important for a data scientist"
 excerpt: "Why do many companies still ask CS puzzle type questions in their coding round for DS roles"
-date: 2021-03-28
+date: 2021-04-28
 tags:
     - meta
 comments: true
