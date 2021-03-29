@@ -11,12 +11,12 @@ comments: true
 
 A few weeks back, I moved to my dream company Microsoft aa a Senior Data Scientist in the cybersecurity domain. Apart from this job offer, I also got multiple other great offers from top tech companies in the OTT, travel and e-commerce sectors. To me, this was a bit surprising as my previous job searches never had such a great response. So, what changed this time around? Here's a small list of things I tried to do differently and that help anyone else right now as well - 
 
--  Beating the ATS
+###  Beating the ATS
 Resumes are not read by humans anymore, especially not in the initial screening round. Most top companies use a tool called Applicant Tracking System which maps the candidates resume and measures its similarity with the given job description. So instead of making a standard resume that you then forward to 100s of companies, try and optimize the % match score for the roles that you really like. Websites like [resumeworded.com](https://resumeworded.com/) do a great job in this regard. I was able to improve my resume scores from low 40s to high 70s by interchanging or adding keywords in my resume targeted towards my top 4-5 companies and roles. 
 
 What tools you use to make your resume, ie, Word, Latex or some other creative design tool doesn't really matter as logn as your resume can be read easily by an ATS. I personally preferred Latex as it gave me the opportunity to learn a new software while working on a mundane job like resume building. As for the length of your resume, the thumb rule is that if you have more than 5 yrs of work ex, use a 2 page resume, else stick to 1 page.
 
--  Don't waste time creating your profiles on Workday / Taleo / other recruiting platforms
+### Don't waste time creating your profiles on Workday / Taleo / other recruiting platforms
 
 Now, that you have created a targeted resume, your first instinct is to apply to as many companies and profiles as possible, right ? Wrong!
 
@@ -26,7 +26,7 @@ I personally feel that the whole process of referrals feels a lot like gate keep
 
 As I did not have a good network of friends or past coworkers in the data science or ML space, so I had to resolve to the next best option.
 
-- Leverage social media
+### Leverage social media
 
 Get LinkedIn Premium. Buy more InMails if you need. 
 Create a well crafted 8-10 lines of cover letter for LinkedIn messages.
