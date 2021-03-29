@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-A few weeks back, I moved to my dream company Microsoft aa a Senior Data Scientist in the cybersecurity domain. Apart from this job offer, I also got multiple other great offers from top tech companies in the OTT, travel and e-commerce sectors. To me, this was a bit surprising as my previous job searches never had such a great response. So, what changed this time around? Here's a small list of things I tried to do differently and that help anyone else right now as well - 
+A few weeks back, I moved to my dream company Microsoft as a Senior Data Scientist in the cybersecurity domain. Apart from this job offer, I also got multiple other great offers from top tech companies in the OTT, travel and e-commerce sectors. To me, this was a bit surprising as my previous job searches never had such a great response. So, what changed this time around? Here's a small list of things I tried to do differently and that might help anyone else right now as well - 
 
 ###  Beating the ATS
 Resumes are not read by humans anymore, especially not in the initial screening round. Most top companies use a tool called Applicant Tracking System which maps the candidates resume and measures its similarity with the given job description. So instead of making a standard resume that you then forward to 100s of companies, try and optimize the % match score for the roles that you really like. Websites like [resumeworded.com](https://resumeworded.com/) do a great job in this regard. I was able to improve my resume scores from low 40s to high 70s by interchanging or adding keywords in my resume targeted towards my top 4-5 companies and roles. 

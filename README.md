@@ -31,7 +31,6 @@ bundle exec jekyll serve --future
 - Summary of Google Analytics data for 2020 in R - LinkedIn Post, no follow up
 - Did Ishant Sharma's stats really change - Using Tensorflow Probability, similar to # SMSes case study in Bayesian analysis e-book
 - Are data structures really important for data scientists ?
-- How I got a job at Microsoft
 - No, all engineering streams are not equal : If I got a rank of 1342 again in JEE 21, what colleges and streams would appear on my preference list ? This works fir me, may not be true fir all. But this is what I’d do if I were an entering freshmen student today, with the benefit of hindsight ofc
 - My advice to myself 10 years back as a sophomore in college :
     College is myopic and far from reality.
