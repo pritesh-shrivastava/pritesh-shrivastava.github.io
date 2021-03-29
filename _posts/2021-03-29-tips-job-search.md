@@ -38,5 +38,5 @@ In the long run, your industry connections with people on LinkedIn, Github or Tw
 Beyond all this, I think one must not underplay the role of luck as well. Due to the ongoing COVID situation, all kinds of interviews were being held remotely and this led to hirng managers be less choosy about the candidates who were living in a different city or state right now and for candiates who can give multiple telephonic / video call interviews in a day for different companies without the need to travel anywhere. It opens up the competition geographically and also helps level the playing feild by giving more opportunities to candidates who would have been less preferred earlier due to logistical reasons. Also, giving interviews remotely from the comfort of your own home can help reduce the anxiety or stress factors as well during the interview process.
 
 If you are currently looking out for a job in the data science / ML space, you might find this post useful as well :
-[How much SQL should one know for data science job roles](https://pritesh-shrivastava.github.io/blog/2021/01/29/how-much-sql-for-ds)
+- [How much SQL should one know for data science job roles](https://pritesh-shrivastava.github.io/blog/2021/01/29/how-much-sql-for-ds)
 
