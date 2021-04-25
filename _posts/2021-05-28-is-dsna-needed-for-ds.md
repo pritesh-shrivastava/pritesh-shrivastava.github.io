@@ -8,24 +8,19 @@ tags:
 comments: true
 ---
 
+#### Does Leetcode grinding make you a better data scientist ?
 
-Leetcode grinding sounds depressing. Similarly hacker rank and hacker earth coding puzzles.
-Subreddits about this topic are even more depressing 
-Looking at how many months people grind on these programming puzzles just to get a FAANG job is just not a very attractive prospect 
+Nope. 
+My opinion may change later, but as of today, I hardly see any benefit in doing that.
 
-MOOCs-
-Stanford, Princeton, UCSD 
-Many books on algorithms like cormen, knuth which take years? To read
-Why ???
+I had posted this question on [Kaggle forum](https://www.kaggle.com/questions-and-answers/225859) as well, and I'm still not convinced by the arguments made by people who supported Leetcoding for data science roles.
 
-I even took a CS elective in college about data structures and algorithms and found the subject so dry and abstract that I dropped out of the CS minor.
+Honestly, Leetcode grinding (OR HackerRank OR HackerEarth) just seems depressing. Go visit a  
+subreddits about this topic and you'll be overwhlemed to know about these Leetcode jockeys. The reason it's become so common is because of the interview patters of "FAANG" companies.
 
-Instead of going down this mundane route, I thought if I have to do this, I might as well enjoy the process. So I started reading sicp.
-Also took the prog Lang mooc to be clear about various programming paradigms and understood difference between fp abd oop, static and dynamic typing. 
-Grokking algorithms book is pretty good.
+I'm not particularly against this subject area though. Data Structures and Algorithms is actually a very interesting and intellectually stimulating topic. But if the only reason you're studying this topic is to crack a FAANG interview, then you'll find it dry, abstract and meaningless.
 
-Go to workera -> different roles different needs
+The good news is that some companies have stopped asking DS/Algorithm questions, and instead ask about ML case studies in the coding round. I'm hopeful this trend will catch up fast.
 
-Now companies have stopped asking Algo questions in coding round slowly and instead ask ml case studies. Trend is changing slowly.
 
-CS people know these very well so they ask Algo to everyone!!
+

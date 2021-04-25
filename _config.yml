@@ -19,7 +19,7 @@ url                      : http://pritesh-shrivastava.github.io
 
 locale                   : "en-US"
 title_separator          : "-"
-subtitle                 : "My learnings in programming and data science"
+subtitle                 : "My learnings in programming, data and life"
 name                     : &name "Pritesh Shrivastava" # &name is a YAML anchor which can be *referenced later
 description              : &description "My tech blog on programming and data science (mostly)"
 #baseurl                  : "" # the subpath of your site, e.g. "/blog"
