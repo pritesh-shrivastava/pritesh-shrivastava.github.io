@@ -4,7 +4,8 @@ title: "Structural and Generative Recursion"
 excerpt: "Looking at the design recipes for 2 common sorting algorithms in Scheme"
 date: 2021-05-30
 tags:
-    - meta
+    - lisp
+    - functional programming
 comments: true
 ---
 

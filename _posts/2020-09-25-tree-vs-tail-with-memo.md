@@ -7,7 +7,7 @@ tags:
     - lisp
     - functional programming
     - python
-    - scheme
+    - sicp
 comments: true
 ---
 

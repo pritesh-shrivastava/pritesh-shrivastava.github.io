@@ -8,7 +8,6 @@ tags:
   - lisp
   - functional programming
   - sicp
-  - scheme
 comments: true
 ---
 
