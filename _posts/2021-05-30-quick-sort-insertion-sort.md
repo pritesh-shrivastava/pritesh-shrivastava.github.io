@@ -125,3 +125,5 @@ Now, our function `quick-sort` is complete, and we can test it similarly as abov
 
 It's generally always easier to frame a recursive function as structural recursion, rather than to wait for an "AHA" moment to design a generative recursive function. However, sometimes the extra ingenuity can be worth it. For eg., the time completexity of quick sort is `O(n * log n)`, which is much better than our simple insertion sort function `O(n * n)`.
 
+
+If you find the field of functional programming interesting, I would encourage you to check out the excellent books [SICP](https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents) or [HtDP](https://htdp.org/2020-5-6/Book/index.html#%28part._htdp2e%29). The [Youtube lectures](https://www.youtube.com/playlist?list=PLE18841CABEA24090) from MIT by the authors of the SICP are also a great learning resource. I've written a couple other blog posts on functional programming in Lisp dialects, which you might wanna check out [here](https://pritesh-shrivastava.github.io/tags/lisp).
