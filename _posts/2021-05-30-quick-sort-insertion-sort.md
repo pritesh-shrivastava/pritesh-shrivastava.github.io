@@ -17,7 +17,7 @@ Here, we only solve a trivial case of the problem, rather than the complete prob
 If the trivial case is solved, recursion works it's magic on the entire list without us telling the computer how to do it!
 
 
-```MIT Scheme
+```scheme
 ; List-of-numbers -> List-of-numbers
 ; sorts a list l in increasing order
 (define (insertion-sort l)
@@ -57,7 +57,7 @@ If the trivial case is solved, recursion works it's magic on the entire list wit
 This is an example of generative recursion. Instead of following a simple template like we did with Insertion Sort, here, you need some kind of mathematical insight to come up with such clever algorithm design. 
 
 
-```MIT Scheme
+```scheme
 ; [List-of Number] -> [List-of Number]
 ; produces a sorted version of alon
 ; assume the numbers are all distinct 
@@ -110,7 +110,3 @@ This is an example of generative recursion. Instead of following a simple templa
 
 Notice that the helper functions `largers` and `smallers` still follow the simple template of structural recursion only.
 
-
-```MIT Scheme
-
-```
