@@ -4,7 +4,7 @@ title: "How much should one know in SQL for data science"
 excerpt: "Most tech firm interviews include SQL problems for DS roles, so how should you prepare for them?"
 date: 2021-01-29
 tags:
-  - interview
+  - meta
 comments: true
 ---
 

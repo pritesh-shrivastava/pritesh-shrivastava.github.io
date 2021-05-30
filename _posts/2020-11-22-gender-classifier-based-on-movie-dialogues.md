@@ -6,7 +6,7 @@ excerpt: "Building a gender classifier model based on the dialogues of character
 date: 2020-11-22
 tags:
   - python
-  - ml
+  - machine learning
 comments: true
 ---
 
