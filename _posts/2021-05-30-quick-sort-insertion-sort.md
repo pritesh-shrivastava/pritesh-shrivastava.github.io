@@ -12,7 +12,7 @@ comments: true
 
 Recursion is a central component in functional programming, and one of my favourity programming concepts. In this post, we are going to look at two distinct ways in which recursive functions can be designed. 
 
-We'll using the examples of 2 very common sorting algorithms for numbers, ie, insertion sort and the quick sort. The code snippets used below have been adapted the free e-book [How to Design Programs](https://htdp.org/2020-5-6/Book/index.html#%28part._htdp2e%29) and translated to MIT Scheme (from a teaching language created in Racket). 
+We'll using the examples of 2 very common sorting algorithms for numbers, ie, insertion sort and the quick sort. The code snippets used below have been adapted the free e-book [How to Design Programs (HtDP)](https://htdp.org/2020-5-6/Book/index.html#%28part._htdp2e%29) and translated to MIT Scheme (from a teaching language created in Racket). 
 
 
 ### Insertion Sort and Structural Recursion
@@ -124,7 +124,7 @@ Now, our function `quick-sort` is complete, and we can test it similarly as abov
     (29 34 43 45 72)
 
 
-It's generally always easier to frame a recursive function as structural recursion, rather than to wait for an "AHA" moment to design a generative recursive function. However, sometimes the extra ingenuity can be worth it. For eg., the time completexity of quick sort is `O(n * log n)`, which is much better than our simple insertion sort function `O(n * n)`.
+It's generally always easier to frame a recursive function as structural recursion, rather than to wait for an "AHA" moment to design a generative recursive function. However, sometimes the extra ingenuity can be worth it. For eg., the time completexity of quick sort is `O(n * log n)` (appending the list of `smallers`, `pivot` and `largers`, which is `O(n)`, exactly `log_{2} n` times). This is much better than our simple insertion sort function, `O(n * n)` (the `insert` function `O(n)` is called `n` times).
 
 
-If you find the field of functional programming interesting, I would encourage you to check out the excellent books [SICP](https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents) or [HtDP](https://htdp.org/2020-5-6/Book/index.html#%28part._htdp2e%29). The [Youtube lectures](https://www.youtube.com/playlist?list=PLE18841CABEA24090) from MIT by the authors of the SICP are also a great learning resource. I've written a couple other blog posts on functional programming in Lisp dialects, which you might wanna check out [here](https://pritesh-shrivastava.github.io/tags/lisp).
+If you find the field of functional programming interesting, I would encourage you to check out the excellent books [Structure & Interpretation of Computer Programs or SICP](https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents) or [HtDP](https://htdp.org/2020-5-6/Book/index.html#%28part._htdp2e%29). The [Youtube lectures](https://www.youtube.com/playlist?list=PLE18841CABEA24090) from MIT by the authors of the SICP are also a great learning resource. I've written a couple other blog posts on functional programming in Lisp dialects, which you might wanna check out [here](https://pritesh-shrivastava.github.io/tags/lisp).
