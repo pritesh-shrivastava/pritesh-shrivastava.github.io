@@ -29,9 +29,7 @@ Let's look at the `insertion-sort` function that takes a list of numbers as its 
 (define (insertion-sort l)
   (cond
     ((null? l) '())
-    (else (insert (car l) (insertion-sort (cdr l))))
-  )
-)
+    (else (insert (car l) (insertion-sort (cdr l))))))
 ```
 We have not yet defined the `insert` function so far. This is "wishful thinking" !!
 If a function `insert` existed that would insert a given no into a sorted list at the right position, that would solve our problem! And so we just used in our recursive definition of `insertion-sort`. Notice that all we have really just solved the trivial case of sorting an empty list. And then, we are relying on recursion to sort the entire list by just naturally traversing the data structure, ie, the list.
@@ -45,11 +43,7 @@ If a function `insert` existed that would insert a given no into a sorted list a
     ((null? l) (cons n '()))
     (else (if (<= n (first l))
               (cons n l)
-              (cons (car l) (insert n (cdr l)))
-          )
-    )
-  )
-)
+              (cons (car l) (insert n (cdr l)))))))
 
 ; testing the insert sort function with an example
 (insertion-sort '(72 45 43 29 34))
@@ -75,12 +69,7 @@ In generative recursion though, instead of following a simple template like we d
     (else (let ((pivot (car l)))
                (append (quick-sort (smallers l pivot))
                        (list pivot)
-                       (quick-sort (largers l pivot))
-               )
-          )
-    )
-  )
-)
+                       (quick-sort (largers l pivot)))))))
 ```
 
 Here, again we used 2 functions `smallers` and `largers` that haven't been defined yet, using wishful thinking once again!
@@ -93,10 +82,7 @@ Here, again we used 2 functions `smallers` and `largers` that haven't been defin
     ((null? alon) '())
     (else (if (> (car alon) n)
               (cons (car alon) (largers (cdr alon) n))
-              (largers (cdr alon) n))
-    )
-  )
-)
+              (largers (cdr alon) n)))))
  
 ; returns the sub list of numbers from a given list of numbers that are smaller than the given number n 
 ; [List-of Number] Number -> [List-of Number]
@@ -105,10 +91,7 @@ Here, again we used 2 functions `smallers` and `largers` that haven't been defin
     ((null? alon) '())
     (else (if (< (car alon) n)
               (cons (car alon) (smallers (cdr alon) n))
-              (smallers (cdr alon) n))
-    )
-  )
-)
+              (smallers (cdr alon) n)))))
 ```
 
 Now, our function `quick-sort` is complete, and we can test it similarly as above. Notice that the helper functions `largers` and `smallers` still follow the simple template of structural recursion only.
