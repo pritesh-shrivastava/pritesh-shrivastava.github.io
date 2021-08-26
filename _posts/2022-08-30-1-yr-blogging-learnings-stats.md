@@ -2,7 +2,7 @@
 layout: post
 title: "What I learnt from last 1 year of tech blogging"
 excerpt: "And why you should blog too, along with Google Analytics stats"
-date: 2021-08-30
+date: 2022-08-30
 tags:
     - meta
 comments: true
