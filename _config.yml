@@ -68,8 +68,6 @@ yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
-twitter:
-  username               : &twitter "pritesh_shri"
 facebook:
   username               : &facebook "thepriteshshrivastava"
   app_id                 :
@@ -81,7 +79,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://twitter.com/pritesh_shri"
     - "https://www.facebook.com/thepriteshshrivastava"
 
 # Analytics
@@ -105,9 +102,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pritesh-shrivastava"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/pritesh_shri"
     - label: "Kaggle"
       icon: "fab fa-fw fa-kaggle"
       url: "https://www.kaggle.com/priteshshrivastava"
@@ -129,9 +123,6 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/pritesh_shri"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pritesh-shrivastava"
