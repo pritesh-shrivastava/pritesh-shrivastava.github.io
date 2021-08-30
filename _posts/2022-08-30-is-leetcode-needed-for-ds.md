@@ -10,7 +10,8 @@ comments: true
 
 #### Does Leetcode grinding make you a better data scientist ?
 
-NOPE. 
+**TLDR** - NOPE
+
 In my 5 year expereince, spread across startups to large scale MNCs, I have hardly ever needed to know `how to traverse a binary tree`, say, in my day to day job as a data scientist! Yet, you'll still find a lot of big tech companies include some Leetcode questions for the first round of most DS job interviews.
 
 When I ask my colleagues the same question, they also respond in a similar manner that it's a pointless skill in the data science domain, but something you need to learn to crack the interviews anyway. If you're interested in a more non-anecdotal answer, check out a dicussion topic I started on [Kaggle forum](https://www.kaggle.com/questions-and-answers/225859) some time back. Largely, the only argument in favour of Leetcode style interviews is that it is a standard practise in the tech industry for hiring Software Engineers, and is a good step to filter out from 100's, if not 1000's, of applicants for DS job roles right now.
