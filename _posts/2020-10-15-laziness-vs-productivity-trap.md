@@ -5,7 +5,6 @@ excerpt: "My experience using productivity tools for personal projects"
 date: 2020-10-15
 tags:
   - productivity
-  - meta
 comments: true
 ---
 
