@@ -4,7 +4,7 @@ title: "Favourite learning resources for ML"
 excerpt: "Books, MOOCs and other resources that I would highly recommend"
 date: 2020-08-31
 tags:
-    - meta
+    - career
 comments: true
 ---
 
