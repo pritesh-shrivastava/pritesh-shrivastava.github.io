@@ -19,9 +19,9 @@ url                      : http://pritesh-shrivastava.github.io
 
 locale                   : "en-US"
 title_separator          : "-"
-subtitle                 : "My learnings in programming, data and life"
+subtitle                 : "Notes on programming, data and life"
 name                     : &name "Pritesh Shrivastava" # &name is a YAML anchor which can be *referenced later
-description              : &description "My tech blog on programming and data science (mostly)"
+description              : &description "My blog on programming and data science (mostly)"
 #baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #repository               : "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -93,8 +93,8 @@ analytics:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : "/assets/images/profile_pic.jpg"
-  bio              : "Data Scientist"
-  location         : "Bhopal, India"
+  bio              : "Student forever"
+  location         : "India"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
