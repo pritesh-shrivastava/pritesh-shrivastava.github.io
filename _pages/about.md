@@ -5,8 +5,6 @@ title: "About"
 #toc: true
 ---
 
-### Hello World!
-
 _Last Updated - June 2022_
 
 
