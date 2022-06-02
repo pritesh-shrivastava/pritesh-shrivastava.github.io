@@ -114,9 +114,9 @@ author:
     - label: "Goodreads"
       icon: "fab fa-fw fa-goodreads"
       url: "https://www.goodreads.com/pritesh_shrivastava"
-    - label: "Soundcloud"
-      icon: "fab fa-fw fa-soundcloud"
-      url: "https://soundcloud.com/pritesh-shrivastava"
+ #   - label: "Soundcloud"
+ #     icon: "fab fa-fw fa-soundcloud"
+ #     url: "https://soundcloud.com/pritesh-shrivastava"
   
 
 
