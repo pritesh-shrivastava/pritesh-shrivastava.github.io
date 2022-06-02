@@ -4,7 +4,7 @@ title: "Tips and Tricks that helped me find a new job"
 excerpt: "Some valuable lessons I learnt in my recent job search experience"
 date: 2021-03-29
 tags:
-    - meta
+    - career
 comments: true
 ---
 
