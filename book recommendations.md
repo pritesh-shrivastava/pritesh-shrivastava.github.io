@@ -2,7 +2,7 @@
 layout: post
 title: "Notes on Vedanta & Buddhism"
 excerpt: ""
-date: 2022-06-05
+date: 
 tags:
     - philosophy
 comments: true
