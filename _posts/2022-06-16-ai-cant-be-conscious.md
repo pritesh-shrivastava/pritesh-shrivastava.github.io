@@ -24,7 +24,7 @@ Forget about the human mind, do we even understand what makes a plant conscious?
 
 #### Are AI programs replicating the ego or the consiousness ?
 
-The consciousness that exists within all of us is something much deeper than our individual sense of "I". Sure, we can write a program and call it Alexa or Siri and that program can visually classify between a cat and a dog through pattern recognition or regurgitate a movie review based on the 1000s of other reviews it had seen in the past. You can direct the program to have a certain personality of likes and dislikes, desires, fears, etc. But as close as we ever come to doing this, the program can only ever replicate an image of our ego. It can not be said to be alive or sentient. 
+The consciousness that exists within all of us is something much deeper than our individual sense of "I". Sure, we can give our program a human name like Alexa or Siri, which can visually classify cats and dogs through pattern recognition, regurgitate a movie review based on the 1000s of other reviews it had seen in the past.. You can direct the program to have a certain personality of likes and dislikes, desires, quirks, fears, etc. But as close as we ever come to doing this, the program can only ever replicate an image of our ego. It can not be said to be alive or sentient. 
 
 
 Consciousness doesn't seem to be a computation. More compute power cannot really make our narrow AI more "conscious". Ancient philosophies like Vedanta & Buddhism can help us understand if we are even asking the right questions. 
