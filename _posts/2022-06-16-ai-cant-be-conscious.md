@@ -2,7 +2,7 @@
 layout: post
 title: "AI, consciousness & Vedanta"
 excerpt: ""
-date: 2022-06-16
+date: 2022-12-16
 tags:
     - philosophy
 comments: true
