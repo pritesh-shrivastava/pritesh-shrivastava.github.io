@@ -40,6 +40,6 @@ Mumtaz Ali, referred to as Sri M, author of _Apprenticed to a Himalayan Master_,
 
 What is time ? Does it really exist ? Or is it a figment of imagination ?
 After all, we always live in the _present_ moment, the _now_. The past only lives in the memory & the future is but an expectation or projection of the mind. Is time a trick played by our mind ?
-The continuity of our stream of thoughts leading us to believe we are definite entity moving forward in time, and space. This book is surely a mind bending experience & it was exciting to try to understand a brilliant physicist's views on the concepts of space-time. A couple of my take-aways - 
-    All theories are wrong. Some are useful.
-    Science moves forward one funeral at a time. 
+The continuity of our stream of thoughts leading us to believe we are definite entity moving forward in time, and space. This book is surely a mind bending experience & it was exciting to try to understand a brilliant physicist's views on the concepts of space-time. A couple of my take-aways :
+    - All theories are wrong. Some are useful.
+    - Science moves forward one funeral at a time. 
