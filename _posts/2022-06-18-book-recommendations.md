@@ -31,8 +31,10 @@ One talks about infinity while the other talks about shunyata or the void. It's 
 [Link 2](https://www.goodreads.com/book/show/10125596-apprenticed-to-a-himalayan-master)  
 
 For an alternate perpective on life, these 2 books offer a peak into the world of mysticism. Read either one or both. I'm clubbing them together because both books talk about a specific path of _yoga_ & offer amazing & sometimes bizarre accounts of 2 real life practitioners.
-A couple of interesting facts about the writers of these 2 books - 
-100's of copies of Paramhansa Yogananda's _Autobiography of a Yogi_ were distributed at the memorial service of Steve Jobs as his last gift.
+A couple of interesting facts about the writers of these 2 books -  
+
+100's of copies of Paramhansa Yogananda's _Autobiography of a Yogi_ were distributed at the memorial service of Steve Jobs as his last gift.  
+
 Mumtaz Ali, referred to as Sri M, author of _Apprenticed to a Himalayan Master_, received the 3rd highest civilian honor of India, _Padma Bhushan_ in 2020.
 
 #### A Brief History of Time - Stephen Hawking
@@ -40,6 +42,8 @@ Mumtaz Ali, referred to as Sri M, author of _Apprenticed to a Himalayan Master_,
 
 What is time ? Does it really exist ? Or is it a figment of imagination ?
 After all, we always live in the _present_ moment, the _now_. The past only lives in the memory & the future is but an expectation or projection of the mind. Is time a trick played by our mind ?
-The continuity of our stream of thoughts leading us to believe we are definite entity moving forward in time, and space. This book is surely a mind bending experience & it was exciting to try to understand a brilliant physicist's views on the concepts of space-time. A couple of my take-aways :
-    - All theories are wrong. Some are useful.
-    - Science moves forward one funeral at a time. 
+The continuity of our stream of thoughts leading us to believe we are definite entity moving forward in time, and space. This book is surely a mind bending experience & it was exciting to try to understand a brilliant physicist's views on the concepts of space-time. A couple of my take-aways :  
+
+    All theories are wrong. Some are useful.  
+
+    Science moves forward one funeral at a time. 
