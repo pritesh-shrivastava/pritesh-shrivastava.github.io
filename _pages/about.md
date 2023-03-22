@@ -5,7 +5,7 @@ title: "About"
 #toc: true
 ---
 
-_Last Updated - June 2022_
+_Last Updated - March 2023_
 
 
 Hi there, I'm Pritesh!
@@ -21,8 +21,5 @@ If you want to connect with me, you can reach out on one of my social media hand
 You can also book a 1:1 connect with me on [topmate](topmate.io/pritesh_shrivastava) for any kind of mentoring or career guidance.
 
 This website is powered by <a href="http://jekyllrb.com">Jekyll</a> & Github Pages, 
-which were surprisingly pretty simple to use. The theme is  
-<a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>, which is free and compatible with Github Pages as a remote theme. To know more about these tools, check out this great 
-<a href="http://jmcglone.com/guides/github-pages/">guide</a>.
-
+which is surprisingly pretty simple to use.
 
