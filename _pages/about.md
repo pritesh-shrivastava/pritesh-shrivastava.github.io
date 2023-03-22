@@ -18,8 +18,7 @@ Once upon a time, I used to solve data science problems on
 competitive platforms like <a href="https://www.kaggle.com/priteshshrivastava">Kaggle</a>, and was fairly active on <a href="https://github.com/pritesh-shrivastava">Github</a>.
 
 If you want to connect with me, you can reach out on one of my social media handles listed on the sidebar. 
-You can also check out my reading list & reviews on <a href="https://www.goodreads.com/user/show/23475269-pritesh-shrivastava">Goodreads</a>.
-
+You can also book a 1:1 connect with me on [topmate](topmate.io/pritesh_shrivastava) for any kind of mentoring or career guidance.
 
 This website is powered by <a href="http://jekyllrb.com">Jekyll</a> & Github Pages, 
 which were surprisingly pretty simple to use. The theme is  
